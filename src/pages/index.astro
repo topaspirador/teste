@@ -1,11 +1,188 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// index.astro - Layout Profissional de Alta Conversão
 ---
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Aspirador | Melhores Análises e Guias de Compra</title>
+    <style>
+      /* 1. RESET E BASE (Velocidade e Leitura) */
+      body { 
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+        background-color: #f4f7f9; 
+        margin: 0; 
+        padding: 0; 
+        color: #2d3436; 
+      }
 
-<Layout>
-	<Welcome />
-</Layout>
+      /* 2. HEADER INTEGRADO (Sem espaços inúteis) */
+      header {
+        background: #ffffff;
+        border-bottom: 1px solid #e1e8ed;
+        text-align: center;
+        padding: 15px 0 0 0; /* Espaço apenas no topo */
+      }
+
+      .logo-container img {
+        width: 100%;
+        max-width: 320px; /* Tamanho ideal para leitura e estética */
+        height: auto;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      /* 3. MENU (SILOS) - Colado na Logo */
+      nav { 
+        background: #ffffff; 
+        padding: 12px 0; 
+        border-top: 1px solid #f1f3f5;
+      }
+      
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+      }
+
+      .nav-links a { 
+        color: #636e72; 
+        text-decoration: none; 
+        font-size: 13px; 
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover { color: #0984e3; }
+
+      /* 4. CONTEÚDO PRINCIPAL (Conforme E-E-A-T) */
+      .container { 
+        max-width: 1140px; 
+        margin: 0 auto; 
+        padding: 30px 20px; 
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .section-title h1 { 
+        font-size: 2.2rem; 
+        color: #2d3436; 
+        margin: 0;
+        font-weight: 800;
+      }
+
+      /* 5. GRADE DE PRODUTOS (DESIGN DA SUA IMAGEM) */
+      .grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px; 
+      }
+
+      .card { 
+        background: #ffffff; 
+        border-radius: 12px; 
+        overflow: hidden; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+        display: flex; 
+        flex-direction: column;
+        transition: transform 0.3s ease;
+      }
+      .card:hover { transform: translateY(-5px); }
+
+      .card img { 
+        width: 100%; 
+        height: 220px; 
+        object-fit: cover; 
+      }
+
+      .card-body { 
+        padding: 25px; 
+        text-align: center; 
+      }
+
+      .card h2 { 
+        margin: 0 0 12px 0; 
+        font-size: 1.15rem; 
+        color: #d35400; /* Laranja da sua referência */
+        font-weight: bold;
+        line-height: 1.4;
+      }
+
+      .card p { 
+        margin: 0; 
+        font-size: 0.95rem; 
+        color: #636e72; 
+        line-height: 1.6; 
+      }
+
+      /* RESPONSIVO (MOBILE) */
+      @media (max-width: 850px) {
+        .grid { grid-template-columns: 1fr; }
+        .logo-container img { max-width: 240px; }
+        .nav-links { gap: 15px; }
+        .section-title h1 { font-size: 1.8rem; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="logo-container">
+        <a href="/">
+          <img src="/logo.webp" alt="Top Aspirador" />
+        </a>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/aspirador-robo">Robôs</a>
+          <a href="/aspirador-vertical">Verticais</a>
+          <a href="/sobre-nos">Sobre</a>
+          <a href="/contato">Contato</a>
+          <a href="/politica-privacidade">Privacidade</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="section-title">
+        <h1>Guia e Análise de Produtos</h1>
+      </div>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="https://picsum.photos/id/160/600/400" alt="Melhor Aspirador Robô">
+          <div class="card-body">
+            <h2>Melhor Aspirador Robô de 2026: Análise Completa</h2>
+            <p>Descubra qual o modelo mais eficiente para manter sua casa limpa sem esforço diário.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="https://picsum.photos/id/20/600/400" alt="Aspirador Vertical">
+          <div class="card-body">
+            <h2>Melhor Aspirador Vertical: Potência e Praticidade</h2>
+            <p>Testamos a bateria e a sucção dos modelos mais vendidos este ano.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="https://picsum.photos/id/1/600/400" alt="Aspirador Portátil">
+          <div class="card-body">
+            <h2>Aspirador Portátil Pro: Vale a pena comprar?</h2>
+            <p>O review sincero sobre o modelo ideal para carros e estofados.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>
