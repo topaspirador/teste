@@ -1,183 +1,179 @@
 ---
-// index.astro - Layout Profissional de Alta Conversão
+// index.astro - VERSÃO FINAL: LOGO GIGANTE + FONTE TECH HARMONIZADA
 ---
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Top Aspirador | Melhores Análises e Guias de Compra</title>
+    <title>Top Aspirador | Melhores Análises e Guias</title>
+    <!-- Fonte 'Exo 2' para combinar com a logo Tech -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;600;800&display=swap" rel="stylesheet">
     <style>
-      /* 1. RESET E BASE (Velocidade e Leitura) */
       body { 
-        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
         background-color: #f4f7f9; 
         margin: 0; 
         padding: 0; 
-        color: #2d3436; 
+        color: #333; 
       }
 
-      /* 2. HEADER INTEGRADO (Sem espaços inúteis) */
-      header {
+      /* CABEÇALHO: LOGO GIGANTE E TÍTULO LADO A LADO */
+      header.main-header {
         background: #ffffff;
-        border-bottom: 1px solid #e1e8ed;
-        text-align: center;
-        padding: 15px 0 0 0; /* Espaço apenas no topo */
+        padding: 10px 20px;
+        border-bottom: 1px solid #eee;
       }
 
-      .logo-container img {
-        width: 100%;
-        max-width: 320px; /* Tamanho ideal para leitura e estética */
+      .logo-title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .logo-area img {
+        width: 500px; /* TAMANHO DO PRINT 02: GIGANTE E COM VISIBILIDADE */
         height: auto;
-        display: inline-block;
-        margin-bottom: 10px;
+        display: block;
       }
 
-      /* 3. MENU (SILOS) - Colado na Logo */
+      .logo-title-container h1 {
+        font-family: 'Exo 2', sans-serif; /* FONTE QUE COMBINA COM A LOGO */
+        font-size: 1.4rem; /* TAMANHO MENOR E ELEGANTE */
+        margin: 0;
+        color: #003566; /* Azul que combina com o brilho da logo */
+        font-weight: 800;
+        line-height: 1.1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* MENU DE NAVEGAÇÃO (SILO) */
       nav { 
-        background: #ffffff; 
-        padding: 12px 0; 
-        border-top: 1px solid #f1f3f5;
+        background: #1a1a1a; 
+        padding: 15px 0; 
+        text-align: center; 
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       }
       
-      .nav-links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px;
-      }
-
       .nav-links a { 
-        color: #636e72; 
+        color: #ffffff; 
+        margin: 0 12px; 
         text-decoration: none; 
-        font-size: 13px; 
+        font-size: 12px; 
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        transition: color 0.2s;
       }
-      .nav-links a:hover { color: #0984e3; }
+      .nav-links a:hover { color: #00d4ff; }
 
-      /* 4. CONTEÚDO PRINCIPAL (Conforme E-E-A-T) */
-      .container { 
-        max-width: 1140px; 
-        margin: 0 auto; 
-        padding: 30px 20px; 
-      }
-
-      .section-title {
+      /* TAGLINE ABAIXO DO MENU */
+      .tagline-container {
         text-align: center;
-        margin-bottom: 40px;
+        padding: 25px 20px 5px 20px;
       }
-
-      .section-title h1 { 
-        font-size: 2.2rem; 
-        color: #2d3436; 
+      .tagline-container p {
         margin: 0;
-        font-weight: 800;
+        color: #636e72;
+        font-size: 1.1rem;
+        font-style: italic;
       }
 
-      /* 5. GRADE DE PRODUTOS (DESIGN DA SUA IMAGEM) */
+      /* CONTEÚDO PRINCIPAL (GRADE) */
+      .container { 
+        max-width: 1100px; 
+        margin: 0 auto; 
+        padding: 20px 20px 60px; 
+      }
+
       .grid { 
         display: grid; 
         grid-template-columns: repeat(3, 1fr); 
-        gap: 30px; 
+        gap: 25px; 
       }
 
       .card { 
         background: #ffffff; 
         border-radius: 12px; 
         overflow: hidden; 
-        box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
         display: flex; 
         flex-direction: column;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s;
       }
       .card:hover { transform: translateY(-5px); }
 
-      .card img { 
-        width: 100%; 
-        height: 220px; 
-        object-fit: cover; 
-      }
+      .card img { width: 100%; height: 200px; object-fit: cover; }
+      .card-body { padding: 25px; text-align: center; }
+      .card h2 { margin: 0 0 12px 0; font-size: 1.1rem; color: #d35400; font-weight: bold; line-height: 1.3; }
+      .card p { margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
 
-      .card-body { 
-        padding: 25px; 
-        text-align: center; 
-      }
-
-      .card h2 { 
-        margin: 0 0 12px 0; 
-        font-size: 1.15rem; 
-        color: #d35400; /* Laranja da sua referência */
-        font-weight: bold;
-        line-height: 1.4;
-      }
-
-      .card p { 
-        margin: 0; 
-        font-size: 0.95rem; 
-        color: #636e72; 
-        line-height: 1.6; 
-      }
-
-      /* RESPONSIVO (MOBILE) */
+      /* RESPONSIVO */
       @media (max-width: 850px) {
+        .logo-title-container { flex-direction: column; gap: 5px; }
+        .logo-area img { width: 90%; max-width: 350px; }
+        .logo-title-container h1 { font-size: 1.2rem; text-align: center; }
         .grid { grid-template-columns: 1fr; }
-        .logo-container img { max-width: 240px; }
-        .nav-links { gap: 15px; }
-        .section-title h1 { font-size: 1.8rem; }
       }
     </style>
   </head>
   <body>
 
-    <header>
-      <div class="logo-container">
-        <a href="/">
-          <img src="/logo.webp" alt="Top Aspirador" />
-        </a>
-      </div>
-      <nav>
-        <div class="nav-links">
-          <a href="/">Home</a>
-          <a href="/aspirador-robo">Robôs</a>
-          <a href="/aspirador-vertical">Verticais</a>
-          <a href="/sobre-nos">Sobre</a>
-          <a href="/contato">Contato</a>
-          <a href="/politica-privacidade">Privacidade</a>
+    <header class="main-header">
+      <div class="logo-title-container">
+        <div class="logo-area">
+          <a href="/">
+            <img src="/logo.webp" alt="Top Aspirador" />
+          </a>
         </div>
-      </nav>
+        <h1>Guia e Análise<br/>de Produtos</h1>
+      </div>
     </header>
 
-    <main class="container">
-      <div class="section-title">
-        <h1>Guia e Análise de Produtos</h1>
+    <nav>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/aspirador-robo">Robôs</a>
+        <a href="/aspirador-vertical">Verticais</a>
+        <a href="/sobre-nos">Sobre</a>
+        <a href="/contato">Contato</a>
+        <a href="/politica-privacidade">Privacidade</a>
       </div>
+    </nav>
 
+    <div class="tagline-container">
+      <p>Seu guia especializado em limpeza doméstica</p>
+    </div>
+
+    <main class="container">
       <div class="grid">
         <!-- Card 1 -->
         <div class="card">
-          <img src="https://picsum.photos/id/160/600/400" alt="Melhor Aspirador Robô">
+          <img src="https://picsum.photos/id/160/500/350" alt="Review">
           <div class="card-body">
             <h2>Melhor Aspirador Robô de 2026: Análise Completa</h2>
-            <p>Descubra qual o modelo mais eficiente para manter sua casa limpa sem esforço diário.</p>
+            <p>Descubra qual o modelo mais eficiente para manter sua casa limpa sem esforço.</p>
           </div>
         </div>
 
         <!-- Card 2 -->
         <div class="card">
-          <img src="https://picsum.photos/id/20/600/400" alt="Aspirador Vertical">
+          <img src="https://picsum.photos/id/20/500/350" alt="Review">
           <div class="card-body">
             <h2>Melhor Aspirador Vertical: Potência e Praticidade</h2>
-            <p>Testamos a bateria e a sucção dos modelos mais vendidos este ano.</p>
+            <p>Testamos a bateria e a sucção dos modelos mais vendidos.</p>
           </div>
         </div>
 
         <!-- Card 3 -->
         <div class="card">
-          <img src="https://picsum.photos/id/1/600/400" alt="Aspirador Portátil">
+          <img src="https://picsum.photos/id/1/500/350" alt="Review">
           <div class="card-body">
-            <h2>Aspirador Portátil Pro: Vale a pena comprar?</h2>
+            <h2>Aspirador Portátil: Vale a pena o investimento?</h2>
             <p>O review sincero sobre o modelo ideal para carros e estofados.</p>
           </div>
         </div>
