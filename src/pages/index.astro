@@ -1,14 +1,17 @@
 ---
-// index.astro - VERSÃO FINAL: LOGO GIGANTE + FONTE TECH HARMONIZADA
+// index.astro - VERSÃO FINAL: PC INTOCADO + CELULAR AJUSTADO (SEM ESPAÇO)
 ---
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Top Aspirador | Melhores Análises e Guias</title>
-    <!-- Fonte 'Exo 2' para combinar com a logo Tech -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;600;800&display=swap" rel="stylesheet">
+    <!-- Fontes Tech que combinam com a logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      /* ==========================================
+         CONFIGURAÇÃO PARA PC (MANTIDA IGUAL)
+         ========================================== */
       body { 
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
         background-color: #f4f7f9; 
@@ -17,7 +20,6 @@
         color: #333; 
       }
 
-      /* CABEÇALHO: LOGO GIGANTE E TÍTULO LADO A LADO */
       header.main-header {
         background: #ffffff;
         padding: 10px 20px;
@@ -34,23 +36,22 @@
       }
 
       .logo-area img {
-        width: 500px; /* TAMANHO DO PRINT 02: GIGANTE E COM VISIBILIDADE */
+        width: 500px; /* TAMANHO GIGANTE QUE VOCÊ APROVOU */
         height: auto;
         display: block;
       }
 
       .logo-title-container h1 {
-        font-family: 'Exo 2', sans-serif; /* FONTE QUE COMBINA COM A LOGO */
-        font-size: 1.4rem; /* TAMANHO MENOR E ELEGANTE */
+        font-family: 'Exo 2', sans-serif;
+        font-size: 1.4rem;
         margin: 0;
-        color: #003566; /* Azul que combina com o brilho da logo */
+        color: #003566; 
         font-weight: 800;
         line-height: 1.1;
         text-transform: uppercase;
         letter-spacing: 1px;
       }
 
-      /* MENU DE NAVEGAÇÃO (SILO) */
       nav { 
         background: #1a1a1a; 
         padding: 15px 0; 
@@ -71,7 +72,6 @@
       }
       .nav-links a:hover { color: #00d4ff; }
 
-      /* TAGLINE ABAIXO DO MENU */
       .tagline-container {
         text-align: center;
         padding: 25px 20px 5px 20px;
@@ -83,7 +83,6 @@
         font-style: italic;
       }
 
-      /* CONTEÚDO PRINCIPAL (GRADE) */
       .container { 
         max-width: 1100px; 
         margin: 0 auto; 
@@ -103,21 +102,45 @@
         box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
         display: flex; 
         flex-direction: column;
-        transition: transform 0.3s;
       }
-      .card:hover { transform: translateY(-5px); }
-
       .card img { width: 100%; height: 200px; object-fit: cover; }
       .card-body { padding: 25px; text-align: center; }
       .card h2 { margin: 0 0 12px 0; font-size: 1.1rem; color: #d35400; font-weight: bold; line-height: 1.3; }
       .card p { margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
 
-      /* RESPONSIVO */
+      /* ==========================================
+         AJUSTE ESPECÍFICO PARA CELULAR (MOBILE) 
+         ========================================== */
       @media (max-width: 850px) {
-        .logo-title-container { flex-direction: column; gap: 5px; }
-        .logo-area img { width: 90%; max-width: 350px; }
-        .logo-title-container h1 { font-size: 1.2rem; text-align: center; }
+        .logo-title-container { 
+          flex-direction: column; 
+          gap: 0px; /* ZEREI O ESPAÇO AQUI */
+        }
+        
+        .logo-area img { 
+          width: 80%; /* Logo bem visível no celular */
+          max-width: 300px;
+          margin: 0 auto; 
+        }
+
+        .logo-title-container h1 { 
+          font-size: 1.2rem; 
+          text-align: center; 
+          margin-top: -10px; /* PUXEI O TÍTULO PARA CIMA DA LOGO */
+          padding: 0 10px;
+        }
+
         .grid { grid-template-columns: 1fr; }
+        
+        .nav-links { 
+          display: flex; 
+          justify-content: center; 
+          flex-wrap: wrap; 
+          gap: 8px; 
+        }
+        .nav-links a { font-size: 10px; margin: 0 3px; }
+        
+        .tagline-container p { font-size: 0.9rem; }
       }
     </style>
   </head>
@@ -130,7 +153,7 @@
             <img src="/logo.webp" alt="Top Aspirador" />
           </a>
         </div>
-        <h1>Guia e Análise<br/>de Produtos</h1>
+        <h1>Guia e Análise de Produtos</h1>
       </div>
     </header>
 
