@@ -1,5 +1,5 @@
 ---
-// index.astro - VERSÃO FINAL: PC INTOCADO + CELULAR AJUSTADO (SEM ESPAÇO)
+// index.astro - VERSÃO FINAL: PC & MOBILE INTOCADOS + RODAPÉ E-E-A-T
 ---
 <html lang="pt-br">
   <head>
@@ -18,6 +18,9 @@
         margin: 0; 
         padding: 0; 
         color: #333; 
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
       header.main-header {
@@ -87,6 +90,7 @@
         max-width: 1100px; 
         margin: 0 auto; 
         padding: 20px 20px 60px; 
+        flex: 1; /* Garante que o rodapé fique no fim */
       }
 
       .grid { 
@@ -109,38 +113,80 @@
       .card p { margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
 
       /* ==========================================
-         AJUSTE ESPECÍFICO PARA CELULAR (MOBILE) 
+         RODAPÉ (FOOTER) - NOVO E OTIMIZADO
+         ========================================== */
+      footer {
+        background-color: #ffffff;
+        border-top: 1px solid #e1e8ed;
+        padding: 40px 0 20px 0;
+        margin-top: 40px;
+        color: #444;
+      }
+
+      .footer-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      .footer-logo img {
+        max-width: 180px;
+        height: auto;
+        margin-bottom: 5px; /* Bem próximo da descrição */
+      }
+
+      .footer-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: #666;
+        margin: 0;
+      }
+
+      .footer-col h4 {
+        color: #111;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li { margin-bottom: 8px; }
+      .footer-links a { text-decoration: none; color: #666; font-size: 0.85rem; }
+      .footer-links a:hover { color: #d35400; }
+
+      address { font-style: normal; font-size: 0.85rem; line-height: 1.5; color: #666; }
+
+      .amazon-disclaimer {
+        max-width: 1100px;
+        margin: 30px auto 0;
+        padding: 20px;
+        border-top: 1px solid #eee;
+        font-size: 0.7rem;
+        color: #999;
+        text-align: center;
+      }
+
+      /* ==========================================
+         AJUSTE MOBILE (MANTIDO E MELHORADO)
          ========================================== */
       @media (max-width: 850px) {
-        .logo-title-container { 
-          flex-direction: column; 
-          gap: 0px; /* ZEREI O ESPAÇO AQUI */
-        }
-        
-        .logo-area img { 
-          width: 80%; /* Logo bem visível no celular */
-          max-width: 300px;
-          margin: 0 auto; 
-        }
-
-        .logo-title-container h1 { 
-          font-size: 1.2rem; 
-          text-align: center; 
-          margin-top: -10px; /* PUXEI O TÍTULO PARA CIMA DA LOGO */
-          padding: 0 10px;
-        }
-
+        .logo-title-container { flex-direction: column; gap: 0px; }
+        .logo-area img { width: 80%; max-width: 300px; margin: 0 auto; }
+        .logo-title-container h1 { font-size: 1.2rem; text-align: center; margin-top: -10px; padding: 0 10px; }
         .grid { grid-template-columns: 1fr; }
-        
-        .nav-links { 
-          display: flex; 
-          justify-content: center; 
-          flex-wrap: wrap; 
-          gap: 8px; 
-        }
+        .nav-links { gap: 8px; }
         .nav-links a { font-size: 10px; margin: 0 3px; }
-        
-        .tagline-container p { font-size: 0.9rem; }
+        /* Rodapé Mobile */
+        .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        .footer-logo img { margin: 0 auto 5px; }
       }
     </style>
   </head>
@@ -179,7 +225,7 @@
           <img src="https://picsum.photos/id/160/500/350" alt="Review">
           <div class="card-body">
             <h2>Melhor Aspirador Robô de 2026: Análise Completa</h2>
-            <p>Descubra qual o modelo mais eficiente para manter sua casa limpa sem esforço.</p>
+            <p>Descubra qual o modelo mais eficiente para sua casa.</p>
           </div>
         </div>
 
@@ -202,6 +248,57 @@
         </div>
       </div>
     </main>
+
+    <!-- RODAPÉ OTIMIZADO CONFORME DOCUMENTAÇÃO -->
+    <footer>
+      <div class="footer-grid">
+        <!-- Coluna 1: Logo e Descrição (Expertise) -->
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="/logo.webp" alt="Logo Top Aspirador" />
+          </div>
+          <p class="footer-description">
+            Especialistas em tecnologia de limpeza. Analisamos os melhores aspiradores do mercado para garantir a escolha certa para seu lar.
+          </p>
+        </div>
+
+        <!-- Coluna 2: SILOs -->
+        <div class="footer-col">
+          <h4>Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="/aspirador-robo">Aspiradores Robô</a></li>
+            <li><a href="/aspirador-vertical">Aspiradores Verticais</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Institucional -->
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul class="footer-links">
+            <li><a href="/sobre-nos">Sobre Nós</a></li>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/politica-privacidade">Privacidade</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: NAP (Authority & Trust) -->
+        <div class="footer-col">
+          <h4>Contato Oficial</h4>
+          <address>
+            <strong>Top Aspirador</strong><br />
+            Av. Pres. Vargas, 435 – Centro<br />
+            Rio de Janeiro – RJ, 20071-003<br />
+            <a href="mailto:topaspirador@gmail.com">topaspirador@gmail.com</a>
+          </address>
+        </div>
+      </div>
+
+      <!-- Disclaimer Amazon -->
+      <div class="amazon-disclaimer">
+        <p>O site Top Aspirador participa do Programa de Associados da Amazon. Como associados da Amazon, ganhamos comissões sobre compras qualificadas feitas através de nossos links.</p>
+        <p>© 2026 Top Aspirador - Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
   </body>
 </html>
