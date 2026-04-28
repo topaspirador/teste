@@ -1,0 +1,399 @@
+---
+// src/pages/politica-privacidade.astro
+const title = "Política de Privacidade - Top Aspirador";
+const description = "Saiba como o Top Aspirador coleta, usa e protege seus dados. Transparência e respeito à sua privacidade.";
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========== ESTILOS GERAIS (IGUAL AO LAYOUT APROVADO) ========== */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f4f7f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header.main-header {
+      background: #ffffff;
+      padding: 10px 20px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .logo-title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .logo-area img {
+      width: 500px;
+      height: auto;
+      display: block;
+    }
+
+    .logo-title-container h1 {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1.4rem;
+      margin: 0;
+      color: #003566;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #1a1a1a;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: #00d4ff;
+    }
+
+    .tagline {
+      text-align: center;
+      padding: 25px 20px 5px 20px;
+      font-style: italic;
+      color: #636e72;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 20px 60px;
+      flex: 1;
+    }
+
+    .article-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 2.2rem;
+      color: #111;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1.6rem;
+      color: #003566;
+      border-left: 5px solid #00d4ff;
+      padding-left: 15px;
+      margin-top: 35px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #003566;
+      text-decoration: underline;
+    }
+
+    /* ========== RODAPÉ (PADRÃO) ========== */
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #e1e8ed;
+      padding: 40px 0;
+      margin-top: 50px;
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .footer-logo img {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .footer-col h4 {
+      color: #111;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    address {
+      font-style: normal;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .amazon-disclaimer {
+      max-width: 1100px;
+      margin: 30px auto 0;
+      padding: 20px;
+      border-top: 1px solid #eee;
+      font-size: 0.7rem;
+      color: #999;
+      text-align: center;
+    }
+
+    /* ========== RESPONSIVO ========== */
+    @media (max-width: 600px) {
+      .logo-title-container {
+        flex-direction: column;
+        gap: 0;
+      }
+      .logo-area img {
+        width: 85%;
+        margin: 0 auto;
+      }
+      .logo-title-container h1 {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: -10px;
+        padding: 0 10px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 15px;
+      }
+      .nav-links a {
+        font-size: 11px;
+      }
+      .container {
+        padding: 10px;
+      }
+      .article-box {
+        padding: 20px 15px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-logo img {
+        margin: 0 auto 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO (EXATAMENTE O MESMO DAS OUTRAS PÁGINAS) -->
+  <header class="main-header">
+    <div class="logo-title-container">
+      <div class="logo-area">
+        <a href="/"><img src="/logo.webp" alt="Top Aspirador" /></a>
+      </div>
+      <h1>Guia e Análise<br/>de Produtos</h1>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/aspirador-robo">Robôs</a>
+      <a href="/aspirador-vertical">Verticais</a>
+      <a href="/sobre-nos">Sobre</a>
+      <a href="/contato">Contato</a>
+      <a href="/politica-privacidade">Privacidade</a>
+    </div>
+  </nav>
+
+  <div class="tagline">
+    <p>Seu guia especializado em limpeza doméstica</p>
+  </div>
+
+  <!-- CONTEÚDO DA POLÍTICA DE PRIVACIDADE -->
+  <main class="container">
+    <div class="article-box">
+      <article itemscope itemtype="https://schema.org/WebPage">
+        
+        <h1 itemprop="name">Política de Privacidade</h1>
+        <p><strong>Última atualização:</strong> 28 de abril de 2026</p>
+
+        <p>No <strong>Top Aspirador</strong>, a sua privacidade é levada a sério. Esta política descreve como coletamos, usamos e protegemos as informações que você nos fornece ao utilizar nosso site <a href="https://topaspirador.com.br">topaspirador.com.br</a>. Estamos comprometidos com as diretrizes de transparência e confiabilidade do Google (E-E-A-T) e com a legislação brasileira de proteção de dados (LGPD).</p>
+
+        <h2>1. Quem somos</h2>
+        <p>O Top Aspirador é um site independente de análises e guias de aspiradores de pó, operado por <strong>Moisés Silva</strong>. Nosso endereço para correspondência é Av. Pres. Vargas, 435 – Centro, Rio de Janeiro – RJ, 20071-003, e nosso e-mail de contato é <a href="mailto:topaspirador@gmail.com">topaspirador@gmail.com</a>.</p>
+
+        <h2>2. Informações que coletamos</h2>
+        <p>Coletamos apenas os dados necessários para melhorar sua experiência e responder às suas solicitações:</p>
+        <ul>
+          <li><strong>Formulários de contato e comentários:</strong> quando você envia uma mensagem pelo nosso site (Formspree), armazenamos seu nome, e-mail e o conteúdo da mensagem. Esses dados são usados exclusivamente para responder sua dúvida e não são compartilhados com terceiros.</li>
+          <li><strong>Cookies e dados de navegação:</strong> utilizamos cookies essenciais para o funcionamento do site e, se você consentir, cookies de análise (Google Analytics) para entendermos como o site é usado e melhorarmos o conteúdo.</li>
+          <li><strong>Dados de afiliados:</strong> ao clicar em links da Amazon ou outros programas de afiliados, cookies de terceiros podem ser instalados para rastrear a origem da compra. Não temos acesso a dados pessoais fornecidos por você nesses sites.</li>
+        </ul>
+
+        <h2>3. Cookies e tecnologias similares</h2>
+        <p>Cookies são pequenos arquivos de texto armazenados no seu navegador. Nosso site pode utilizar:</p>
+        <ul>
+          <li><strong>Cookies estritamente necessários:</strong> garantem que o site funcione corretamente (como sessão de usuário, segurança). Não requerem consentimento.</li>
+          <li><strong>Cookies de desempenho (opcionais):</strong> como o Google Analytics, que nos ajudam a entender quantas pessoas visitam nossas páginas e quais são mais lidas. Eles só serão ativados se você aceitar no banner de cookies.</li>
+        </ul>
+        <p>Você pode gerenciar ou desativar os cookies diretamente nas configurações do seu navegador. Consulte a ajuda do seu navegador para mais detalhes.</p>
+
+        <h2>4. Programa de Associados Amazon</h2>
+        <p>O Top Aspirador participa do Programa de Associados da Amazon, um serviço de afiliados que permite que sites recebam comissões por meio de links para a Amazon. Quando você clica em um link de produto e realiza uma compra, um cookie de rastreamento é instalado pela Amazon (não por nós). Esse cookie não contém informações pessoais e é usado apenas para atribuir a comissão. <strong>Você não paga nenhum valor adicional por isso.</strong></p>
+
+        <h2>5. Como usamos seus dados</h2>
+        <p>Utilizamos as informações coletadas para:</p>
+        <ul>
+          <li>Responder suas perguntas e comentários enviados via formulário;</li>
+          <li>Analisar o tráfego do site para melhorar a experiência do usuário;</li>
+          <li>Cumprir obrigações legais e prevenir fraudes.</li>
+        </ul>
+        <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing.</p>
+
+        <h2>6. Direitos do titular dos dados (LGPD)</h2>
+        <p>De acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem direito a:</p>
+        <ul>
+          <li>Confirmar a existência de tratamento de seus dados;</li>
+          <li>Acessar seus dados;</li>
+          <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+          <li>Solicitar a eliminação dos dados desnecessários ou tratados em desconformidade com a lei;</li>
+          <li>Revogar o consentimento, quando aplicável.</li>
+        </ul>
+        <p>Para exercer qualquer um desses direitos, entre em contato pelo e-mail <a href="mailto:topaspirador@gmail.com">topaspirador@gmail.com</a>. Responderemos em até 15 dias.</p>
+
+        <h2>7. Segurança da informação</h2>
+        <p>Adotamos medidas técnicas e organizacionais para proteger seus dados contra acessos não autorizados, perda ou alteração. Utilizamos conexão segura (HTTPS) e serviços confiáveis para armazenamento de formulários (Formspree).</p>
+
+        <h2>8. Links para sites de terceiros</h2>
+        <p>Nosso site contém links para lojas parceiras (como Amazon), redes sociais e outros sites externos. Esta política de privacidade se aplica apenas ao Top Aspirador. Ao clicar em um link externo, recomendamos que você leia a política de privacidade do site de destino.</p>
+
+        <h2>9. Alterações nesta política</h2>
+        <p>Eventuais atualizações nesta política serão publicadas nesta página, com a data de revisão. Recomendamos que você a visite periodicamente.</p>
+
+        <h2>10. Contato</h2>
+        <p>Em caso de dúvidas sobre esta política ou sobre o tratamento de seus dados, fale conosco:</p>
+        <ul itemscope itemtype="https://schema.org/Organization">
+          <li><strong>E-mail:</strong> <a href="mailto:topaspirador@gmail.com" itemprop="email">topaspirador@gmail.com</a></li>
+          <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <strong>Endereço:</strong> <span itemprop="streetAddress">Av. Pres. Vargas, 435 – Centro</span>, <span itemprop="addressLocality">Rio de Janeiro</span> – <span itemprop="addressRegion">RJ</span>, <span itemprop="postalCode">20071-003</span>
+          </li>
+        </ul>
+
+        <p><em>Esta política foi elaborada com base nas diretrizes de qualidade do Google (E-E-A-T) e na legislação brasileira.</em></p>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- RODAPÉ (EXATAMENTE O MESMO DAS OUTRAS PÁGINAS) -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="/logo.webp" alt="Logo Top Aspirador" />
+        </div>
+        <p class="footer-description">Especialistas em tecnologia de limpeza. Analisamos os melhores produtos para você.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul class="footer-links">
+          <li><a href="/aspirador-robo">Robôs</a></li>
+          <li><a href="/aspirador-vertical">Verticais</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul class="footer-links">
+          <li><a href="/sobre-nos">Sobre Nós</a></li>
+          <li><a href="/contato">Contato</a></li>
+          <li><a href="/politica-privacidade">Privacidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato Oficial</h4>
+        <address>
+          <strong>Top Aspirador</strong><br />
+          Av. Pres. Vargas, 435 – Centro<br />
+          Rio de Janeiro – RJ, 20071-003<br />
+          topaspirador@gmail.com
+        </address>
+      </div>
+    </div>
+    <div class="amazon-disclaimer">
+      <p>O site Top Aspirador participa do Programa de Associados da Amazon. Ganhamos comissões sobre compras qualificadas.</p>
+      <p>© 2026 Top Aspirador - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
