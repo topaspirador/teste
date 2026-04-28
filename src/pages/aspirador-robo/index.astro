@@ -1,326 +1,318 @@
 ---
-// ========== CONFIGURAÇÕES DA PÁGINA ==========
+// index.astro dentro da pasta aspirador-robo - CONTEÚDO INTEGRAL WP + COMENTÁRIOS
 const title = "O Guia Definitivo: Como Escolher o Melhor Robô Aspirador em 2026 (Análise de Especialistas)";
-const description = "Análise sincera dos melhores robôs aspiradores testados em casas reais. Comparativo, prós, contras e guia de compra para você acertar na escolha.";
-const authorName = "Especialista TopAspirador";
-const authorJob = "Tester de Robôs Aspiradores há 5 anos";
-const authorImage = "https://topaspirador.com.br/wp-content/uploads/2026/autor.jpg"; // Troque pela foto real
-const authorLinkedIn = "https://linkedin.com/in/topaspirador";
-const authorLattes = "https://lattes.cnpq.br/exemplo";
-const siteUrl = "https://topaspirador.com.br";
+const description = "Análise sincera dos melhores robôs aspiradores testados em casas reais. Comparativo, prós, contras e guia de compra.";
 ---
 
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://topaspirador.com.br/guia-robos" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.7;
-      color: #333;
-    }
-    h1, h2, h3 { color: #222; }
-    .product-card {
-      max-width: 400px;
-      margin: 20px auto;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      text-align: center;
-      background-color: #fff;
-    }
-    .btn-amazon {
-      display: block;
-      background-color: #FFD814;
-      color: #111;
-      text-align: center;
-      padding: 16px 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      border: 1px solid #FCD200;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .pros-cons { padding: 10px; background-color: #f0f0f0; margin: 10px 0; }
-    .table-wrapper { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    th { background-color: #f9f9f9; }
-    .faq-section { margin-bottom: 1rem; }
-    .footer-note { text-align: center; background-color: #f0f0f0; padding: 15px; font-style: italic; margin-top: 2rem; }
-    .author-box {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 2rem;
-      border-top: 1px solid #eee;
-      padding-top: 1rem;
-    }
-    .author-box img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  </style>
-</head>
-<body>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
 
-  <article itemscope itemtype="https://schema.org/Article">
-    <meta itemprop="datePublished" content="2026-04-28" />
-    <meta itemprop="author" content={authorName} />
-    <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
-      <meta itemprop="name" content="TopAspirador" />
-    </span>
+    <!-- SCHEMA.ORG (SEO TÉCNICO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "O Guia Definitivo: Como Escolher o Melhor Robô Aspirador em 2026",
+        "image": ["https://topaspirador.com.br/wp-content/uploads/2026/03/Xiaomi-Robot-Vacuum-X10-1.webp"],
+        "author": { "@type": "Person", "name": "Especialista TopAspirador" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Top Aspirador",
+          "logo": { "@type": "ImageObject", "url": "https://topaspirador.com.br/logo.webp" }
+        }
+      }
+    </script>
 
-    <h1 itemprop="headline">{title}</h1>
+    <style>
+      /* DESIGN BLOQUEADO - IGUAL AO APROVADO */
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
+      header.main-header { background: #ffffff; padding: 10px 20px; border-bottom: 1px solid #eee; text-align: center; }
+      .logo-title-container { display: flex; align-items: center; justify-content: center; gap: 20px; max-width: 1300px; margin: 0 auto; }
+      .logo-area img { width: 500px; height: auto; display: block; }
+      .logo-title-container h1 { font-family: 'Exo 2', sans-serif; font-size: 1.4rem; margin: 0; color: #003566; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+      nav { background: #1a1a1a; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links a { color: #ffffff; margin: 0 12px; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+      .nav-links a:hover { color: #00d4ff; }
+      .tagline { text-align: center; padding: 25px 20px 5px 20px; font-style: italic; color: #636e72; font-size: 1.1rem; }
+      
+      .container { max-width: 1000px; margin: 0 auto; padding: 20px 20px 60px; flex: 1; }
+      .article-box { background: #ffffff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+      
+      /* ESTILOS PARA O CONTEÚDO DO WORDPRESS */
+      .wp-block-heading { font-family: 'Exo 2', sans-serif; margin-top: 30px; }
+      h1.wp-block-heading { font-size: 2.2rem; color: #111; line-height: 1.2; }
+      h2.wp-block-heading { font-size: 1.6rem; color: #003566; border-left: 5px solid #00d4ff; padding-left: 15px; }
+      p { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 20px; }
+      .has-background { padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+      .has-base-background-color { background-color: #f1f3f5; }
+      
+      /* TABELA WP */
+      .wp-block-table { overflow-x: auto; margin: 30px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.9rem; border: 1px solid #ddd; }
+      th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+      th { background-color: #f9f9f9; font-weight: 800; }
 
-    <!-- Introdução -->
-    <p>Quem aqui nunca chegou em casa exausta depois de um dia longo e só queria encontrar o chão limpo? A gente sabe que a rotina é pesada e manter a casa em ordem exige um esforço constante. É por isso que os robôs aspiradores deixaram de ser luxo e viraram verdadeiros salvadores de tempo. Mas, com tantas opções nas prateleiras, como saber qual deles realmente vai te ajudar e não vai ficar parado no meio do caminho? Preparei esta análise sincera, de quem testou e viveu a realidade de cada um desses modelos, para você acertar na escolha de primeira.</p>
+      /* FAQ WP */
+      .schema-faq { background: #f9f9f9; padding: 20px; border-radius: 10px; margin-top: 30px; }
+      .schema-faq-section { margin-bottom: 20px; }
+      .schema-faq-question { display: block; font-weight: bold; color: #003566; margin-bottom: 5px; }
 
-    <!-- Metodologia / Credibilidade -->
-    <h2>Por Que Confiar na Nossa Análise? Nossa Metodologia de Testes</h2>
-    <p>Nossa credibilidade é nosso maior ativo. Para criar este guia, nossa equipe não se baseia apenas em especificações técnicas. Avaliamos os modelos mais populares em cenários reais do dia a dia: testamos o poder de sucção em pisos frios, laminados e tapetes; analisamos a eficiência da função de passar pano; e colocamos à prova a inteligência da navegação e a usabilidade dos aplicativos. O resultado é uma análise honesta, focada no que realmente importa para você.</p>
+      /* COMENTÁRIOS */
+      .comment-section { margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px; }
+      .comment-form { display: flex; flex-direction: column; gap: 15px; }
+      .comment-form input, .comment-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: sans-serif; }
+      .comment-btn { background-color: #003566; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
 
-    <!-- Xiaomi S10 -->
-    <h2><strong>Xiaomi Robot Vacuum S10: A Inteligência que Mapeia Tudo</strong></h2>
-    <div class="product-card">
-      <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Xiaomi-Robot-Vacuum-X10-1.webp" 
-           alt="Robô Aspirador Xiaomi Robot Vacuum S10" 
-           style="width: 100%; max-height: 250px; object-fit: contain;" loading="lazy" />
-      <a href="https://topaspirador.com.br/xiaomix10" 
-         target="_blank" rel="sponsored noopener" class="btn-amazon">
-        <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" 
-               alt="Amazon" style="width: 40px; height: 30px;" loading="lazy" />
-          Comprar na Amazon
-        </span>
-      </a>
-    </div>
-    <p>O Xiaomi S10 é aquele robô que parece que conhece cada canto da sua casa melhor do que você. Ele usa um sistema de laser que desenha o mapa do ambiente com uma precisão impressionante, o que evita que ele fique batendo nos móveis ou se perdendo.</p>
-    <p class="pros-cons">✅ <strong>Prós</strong> – O mapeamento a laser é o grande diferencial, permitindo que ele limpe a casa de forma muito organizada e eficiente, além de ser excelente para quem quer controlar tudo pelo celular com muita facilidade.</p>
-    <p class="pros-cons">❌ <strong>Contra</strong> – Como ele é bem tecnológico, pode exigir um pouco mais de paciência na configuração inicial do aplicativo, e o reservatório de pó não é dos maiores, precisando ser esvaziado com frequência.</p>
+      /* RODAPÉ PRINT 01 */
+      footer { background-color: #ffffff; border-top: 1px solid #e1e8ed; padding: 40px 0; margin-top: 50px; }
+      .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 30px; padding: 0 20px; }
+      .footer-logo img { max-width: 180px; height: auto; margin-bottom: 15px; }
+      .footer-col h4 { color: #111; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; }
+      .footer-links { list-style: none; padding: 0; margin: 0; }
+      .footer-links li { margin-bottom: 10px; }
+      .footer-links a { text-decoration: none; color: #666; font-size: 0.85rem; }
+      address { font-style: normal; font-size: 0.85rem; line-height: 1.6; color: #666; }
+      .amazon-disclaimer { max-width: 1100px; margin: 30px auto 0; padding: 20px; border-top: 1px solid #eee; font-size: 0.7rem; color: #999; text-align: center; }
 
-    <!-- WAP W100 -->
-    <h2><strong>WAP Robot W100: O Ajudante Prático do Dia a Dia</strong></h2>
-    <div class="product-card">
-      <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/WAP-Robot-W100-2.webp" 
-           alt="Robô Aspirador WAP Robot W100" 
-           style="width: 100%; max-height: 250px; object-fit: contain;" loading="lazy" />
-      <a href="https://topaspirador.com.br/waprobotw100" 
-         target="_blank" rel="sponsored noopener" class="btn-amazon">
-        <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" 
-               alt="Amazon" style="width: 40px; height: 30px;" loading="lazy" />
-          Comprar na Amazon
-        </span>
-      </a>
-    </div>
-    <p>O WAP W100 é aquele modelo que a gente ama pela simplicidade. Ele não tenta ser uma espaçonave, ele quer apenas ser um bom ajudante. É perfeito para quem mora em apartamentos menores e quer manter a poeira sob controle sem ter que aprender a programar um computador.</p>
-    <p class="pros-cons">✅ <strong>Prós</strong> – É super compacto, conseguindo passar por baixo de quase todos os móveis, e o seu valor é muito justo pelo que entrega, sendo uma das melhores opções para quem está comprando o primeiro robô.</p>
-    <p class="pros-cons">❌ <strong>Contra</strong> – Ele não possui mapeamento inteligente, então ele limpa de forma mais aleatória, e sua bateria tem uma autonomia menor, sendo mais indicado para ambientes pequenos.</p>
+      @media (max-width: 850px) {
+        .logo-title-container { flex-direction: column; gap: 0px; }
+        .logo-area img { width: 80%; }
+        .logo-title-container h1 { font-size: 1.2rem; text-align: center; margin-top: -10px; }
+        .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      }
+    </style>
+  </head>
+  <body>
 
-    <!-- iRobot Roomba J7+ -->
-    <h2><strong>iRobot Roomba Combo J7+: O Robô que Pensa por Você</strong></h2>
-    <div class="product-card">
-      <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/iRobot-Roomba-Combo-J7.webp" 
-           alt="Robô Aspirador iRobot Roomba Combo J7+" 
-           style="width: 100%; max-height: 250px; object-fit: contain;" loading="lazy" />
-      <a href="https://topaspirador.com.br/irobotroombaj7" 
-         target="_blank" rel="sponsored noopener" class="btn-amazon">
-        <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" 
-               alt="Amazon" style="width: 40px; height: 30px;" loading="lazy" />
-          Comprar na Amazon
-        </span>
-      </a>
-    </div>
-    <p>Se você quer o que há de mais avançado, o Roomba Combo J7+ é outro nível. Ele tem uma tecnologia que identifica objetos, como fios ou brinquedos no chão, e desvia deles automaticamente. É o luxo da tranquilidade de não precisar arrumar a casa antes de colocar o robô para trabalhar.</p>
-    <p class="pros-cons">✅ <strong>Prós</strong> – A capacidade de desviar de obstáculos é imbatível, ele aspira e passa pano com muita eficiência, e a base de autolimpeza é o sonho de qualquer dona de casa, pois você não precisa nem tocar na sujeira.</p>
-    <p class="pros-cons">❌ <strong>Contra</strong> – O investimento inicial é bem mais alto, sendo um produto premium, e ele ocupa um espaço considerável na casa por causa da sua base de descarte.</p>
-
-    <!-- Electrolux ERB30 -->
-    <h3><strong>Electrolux ERB30: A Confiabilidade que a Gente Conhece</strong></h3>
-    <div class="product-card">
-      <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Electrolux-ERB30.webp" 
-           alt="Robô Aspirador Electrolux ERB30" 
-           style="width: 100%; max-height: 250px; object-fit: contain;" loading="lazy" />
-      <a href="https://topaspirador.com.br/electroluxerb30" 
-         target="_blank" rel="sponsored noopener" class="btn-amazon">
-        <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" 
-               alt="Amazon" style="width: 40px; height: 30px;" loading="lazy" />
-          Comprar na Amazon
-        </span>
-      </a>
-    </div>
-    <p>A Electrolux já faz parte da nossa vida há anos, e o ERB30 traz essa segurança. Ele é robusto, fácil de cuidar e faz um trabalho de limpeza muito honesto em pisos frios e laminados, sendo uma escolha segura para quem não quer surpresas.</p>
-    <p class="pros-cons">✅ <strong>Prós</strong> – É muito silencioso comparado aos outros, tem um filtro de excelente qualidade que ajuda muito quem tem alergias, e a assistência técnica da marca é muito fácil de encontrar em qualquer lugar.</p>
-    <p class="pros-cons">❌ <strong>Contra</strong> – Ele não possui a tecnologia de mapeamento avançado, então pode demorar um pouco mais para limpar cômodos muito grandes, e ele não é a melhor opção para tapetes muito grossos.</p>
-
-    <!-- Liectroux G7 -->
-    <h2><strong>Liectroux G7: O Poder da Navegação a Laser</strong></h2>
-    <div class="product-card">
-      <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Liectroux-G7.webp" 
-           alt="Robô Aspirador Liectroux G7" 
-           style="width: 100%; max-height: 250px; object-fit: contain;" loading="lazy" />
-      <a href="https://topaspirador.com.br/liectrouxg7" 
-         target="_blank" rel="sponsored noopener" class="btn-amazon">
-        <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" 
-               alt="Amazon" style="width: 40px; height: 30px;" loading="lazy" />
-          Comprar na Amazon
-        </span>
-      </a>
-    </div>
-    <p>O Liectroux G7 é uma surpresa muito positiva. Ele entrega um sistema de navegação a laser de alta precisão por um valor muito mais acessível que os concorrentes da mesma categoria, sendo um ótimo meio-termo entre tecnologia e economia.</p>
-    <p class="pros-cons">✅ <strong>Prós</strong> – O mapeamento a laser funciona perfeitamente, sendo muito rápido para reconhecer os cômodos, e ele possui uma potência de sucção surpreendente que lida muito bem com pelos de animais.</p>
-    <p class="pros-cons">❌ <strong>Contra</strong> – O aplicativo não é tão intuitivo quanto o da Xiaomi, o que pode confundir um pouco no começo, e o acabamento plástico dele parece um pouco mais simples que os modelos premium.</p>
-
-    <hr />
-
-    <!-- Tabela Comparativa -->
-    <h2>Tabela Comparativa Rápida: Os 5 Melhores Lado a Lado</h2>
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Modelo</th>
-            <th>Potência (aprox.)</th>
-            <th>Passa Pano?</th>
-            <th>Mapeamento</th>
-            <th>Autonomia (aprox.)</th>
-            <th>Ideal Para</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong><a href="http://topaspirador.com.br/xiaomirobots10" target="_blank" rel="sponsored noopener">Xiaomi S10</a></strong></td>
-            <td>4.000 Pa</td>
-            <td>Sim</td>
-            <td>Laser (LiDAR)</td>
-            <td>130 min</td>
-            <td>Equilíbrio e tecnologia</td>
-          </tr>
-          <tr>
-            <td><strong><a href="http://topaspirador.com.br/waprobotw100" target="_blank" rel="sponsored noopener">WAP W100</a></strong></td>
-            <td>1.400 Pa</td>
-            <td>Sim</td>
-            <td>Aleatório</td>
-            <td>90 min</td>
-            <td>Orçamento limitado</td>
-          </tr>
-          <tr>
-            <td><strong><a href="http://topaspirador.com.br/irobotroombaj7" target="_blank" rel="sponsored noopener">Roomba J7+</a></strong></td>
-            <td>Não divulgado</td>
-            <td>Sim (avançado)</td>
-            <td>Câmera (vSLAM)</td>
-            <td>90 min</td>
-            <td>Automação total</td>
-          </tr>
-          <tr>
-            <td><strong><a href="http://topaspirador.com.br/electroluxerb30" target="_blank" rel="sponsored noopener">Electrolux ERB30</a></strong></td>
-            <td>2.200 Pa</td>
-            <td>Sim</td>
-            <td>Giroscópio</td>
-            <td>120 min</td>
-            <td>Donos de pets e alérgicos</td>
-          </tr>
-          <tr>
-            <td><strong><a href="http://topaspirador.com.br/liectrouxg7" target="_blank" rel="sponsored noopener">Liectroux G7</a></strong></td>
-            <td>6.500 Pa</td>
-            <td>Sim (vibratório)</td>
-            <td>Laser (LiDAR)</td>
-            <td>150 min</td>
-            <td>Limpeza pesada e pano</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2><strong>Guia de Compra: Decifrando a Tecnologia Para Não Errar na Escolha</strong></h2>
-    <p>Na hora de escolher, o segredo não é o mais caro, mas o que cabe na sua rotina. Se você tem muitos móveis baixos, foque na altura do robô. Se tem pets, olhe a potência de sucção e a facilidade de limpar a escova. Se sua casa é grande, o mapeamento a laser é obrigatório para ele não se perder. E nunca esqueça de olhar a facilidade de encontrar filtros e peças de reposição, porque esse robô vai trabalhar todo dia e vai precisar de manutenção!</p>
-
-    <h3><strong>Conclusão: Qual o Veredito Final?</strong></h3>
-    <p>Se você quer o máximo de tecnologia e não se importa em investir, o Roomba J7+ é a escolha. Se quer um equilíbrio perfeito entre tecnologia e valor, o Xiaomi S10 ou o Liectroux G7 vão te deixar muito feliz. Agora, se o foco é praticidade imediata e custo baixo, o WAP W100 ou o Electrolux ERB30 são seus melhores amigos. O melhor robô é aquele que tira o peso das suas costas e te devolve tempo para fazer o que você realmente ama.</p>
-
-    <!-- FAQ com Schema.org -->
-    <h2>Perguntas Frequentes (FAQ)</h2>
-    <div itemscope itemtype="https://schema.org/FAQPage">
-      <div class="faq-section" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name"><strong>Qual a melhor marca de robô aspirador?</strong></h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Marcas como Xiaomi, iRobot (Roomba), WAP e Electrolux são as mais confiáveis e com melhor suporte no Brasil. A Xiaomi se destaca pelo custo-benefício em tecnologia, enquanto a iRobot lidera em inovação e robustez.</p>
-        </div>
+    <header class="main-header">
+      <div class="logo-title-container">
+        <div class="logo-area"><a href="/"><img src="/logo.webp" alt="Top Aspirador" /></a></div>
+        <h1>Guia e Análise<br/>de Produtos</h1>
       </div>
-      <div class="faq-section" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name"><strong>Robô aspirador substitui a faxina tradicional?</strong></h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Não 100%. Ele é uma ferramenta de manutenção poderosa que vai espaçar enormemente a necessidade de uma faxina pesada. Você ainda precisará limpar cantos específicos e talvez fazer uma limpeza profunda mensalmente.</p>
-        </div>
-      </div>
-      <div class="faq-section" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name"><strong>Pode usar produto de limpeza no reservatório de água?</strong></h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text"><strong>Não!</strong> Use apenas água. Produtos químicos podem danificar permanentemente os componentes internos do robô.</p>
-        </div>
-      </div>
-      <div class="faq-section" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name"><strong>Ele funciona no escuro?</strong></h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Modelos com navegação a laser (LiDAR) funcionam perfeitamente no escuro. Modelos que usam câmera (vSLAM) precisam de um mínimo de luz para navegar com precisão.</p>
-        </div>
-      </div>
-      <div class="faq-section" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name"><strong>Faz muito barulho?</strong></h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Eles fazem menos barulho que um aspirador tradicional. O ruído é comparável ao de um ventilador ou micro-ondas. Muitos modelos possuem um modo silencioso com potência reduzida.</p>
-        </div>
-      </div>
-    </div>
+    </header>
 
-    <p style="text-align: center; font-style: italic;">E agora, me conta aqui: qual desses modelos mais te chamou a atenção para a sua casa? <strong>Deixe o seu comentário logo abaixo!</strong> Eu adoro ouvir as experiências de vocês e estou aqui para te ajudar a decidir. Vamos deixar essa casa brilhando juntas?</p>
-
-    <p class="footer-note">🔎 <strong>Transparência:</strong> Como Associado da Amazon, o TopAspirador recebe uma pequena comissão por compras qualificadas feitas através dos nossos links. Você não paga nem um centavo a mais por isso e ainda nos ajuda a manter nossas dicas de limpeza sempre gratuitas e atualizadas. Muito obrigada pelo seu apoio!</p>
-
-    <!-- Biografia do Autor (Autoridade e Experiência) -->
-    <div class="author-box" itemscope itemtype="https://schema.org/Person">
-      <img src={authorImage} alt={`Foto de ${authorName}`} itemprop="image" loading="lazy" />
-      <div>
-        <strong itemprop="name">{authorName}</strong><br />
-        <span itemprop="jobTitle">{authorJob}</span>
-        <p itemprop="description" style="margin: 0.5rem 0; font-size: 0.9rem;">
-          Testou pessoalmente todos os modelos apresentados, em casas com pets e diferentes tipos de piso.
-        </p>
-        <a href={authorLinkedIn} itemprop="sameAs" aria-label="LinkedIn do autor">LinkedIn</a> |
-        <a href={authorLattes} itemprop="sameAs" aria-label="Currículo Lattes">Currículo Lattes</a>
-      </div>
-    </div>
-
-  </article>
-
-  <!-- Rodapé de confiança (exigido pelo E-E-A-T) -->
-  <footer style="margin-top: 2rem; border-top: 2px solid #eee; padding-top: 1rem;" itemscope itemtype="https://schema.org/WPFooter">
     <nav>
-      <a href="/sobre">Sobre</a> |
-      <a href="/contato">Contato</a> |
-      <a href="/privacidade">Política de Privacidade</a>
+      <div class="nav-links">
+        <a href="/">Home</a><a href="/aspirador-robo">Robôs</a><a href="/aspirador-vertical">Verticais</a><a href="/sobre-nos">Sobre</a><a href="/contato">Contato</a><a href="/politica-privacidade">Privacidade</a>
+      </div>
     </nav>
-    <p style="font-size: 0.9rem;">© 2026 TopAspirador. Todos os direitos reservados.</p>
-  </footer>
 
-</body>
+    <div class="tagline"><p>Seu guia especializado em limpeza doméstica</p></div>
+
+    <main class="container">
+      <div class="article-box">
+        <article>
+          <!-- CONTEÚDO ORIGINAL DO WORDPRESS NA ÍNTEGRA -->
+          
+          <h1 class="wp-block-heading">O Guia Definitivo: Como Escolher o Melhor Robô Aspirador em 2026 (Análise de Especialistas)</h1>
+
+          <p>Quem aqui nunca chegou em casa exausta depois de um dia longo e só queria encontrar o chão limpo? A gente sabe que a rotina é pesada e manter a casa em ordem exige um esforço constante. É por isso que os robôs aspiradores deixaram de ser luxo e viraram verdadeiros salvadores de tempo. Mas, com tantas opções nas prateleiras, como saber qual deles realmente vai te ajudar e não vai ficar parado no meio do caminho? Preparei esta análise sincera, de quem testou e viveu a realidade de cada um desses modelos, para você acertar na escolha de primeira.</p>
+
+          <h2 class="wp-block-heading">Por Que Confiar na Nossa Análise? Nossa Metodologia de Testes</h2>
+
+          <p>Nossa credibilidade é nosso maior ativo. Para criar este guia, nossa equipe não se baseia apenas em especificações técnicas. Avaliamos os modelos mais populares em cenários reais do dia a dia: testamos o poder de sucção em pisos frios, laminados e tapetes; analisamos a eficiência da função de passar pano; e colocamos à prova a inteligência da navegação e a usabilidade dos aplicativos. O resultado é uma análise honesta, focada no que realmente importa para você.</p>
+
+          <h2 class="wp-block-heading"><strong>Xiaomi Robot Vacuum S10: A Inteligência que Mapeia Tudo</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Xiaomi-Robot-Vacuum-X10-1.webp" alt="Robô Aspirador Xiaomi Robot Vacuum S10" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/xiaomix10" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>O Xiaomi S10 é aquele robô que parece que conhece cada canto da sua casa melhor do que você. Ele usa um sistema de laser que desenha o mapa do ambiente com uma precisão impressionante, o que evita que ele fique batendo nos móveis ou se perdendo.</p>
+
+          <p class="has-base-background-color has-background">✅&nbsp;<strong>Prós</strong>&nbsp;– O mapeamento a laser é o grande diferencial, permitindo que ele limpe a casa de forma muito organizada e eficiente, além de ser excelente para quem quer controlar tudo pelo celular com muita facilidade.</p>
+
+          <p class="has-base-background-color has-background">❌&nbsp;<strong>Contra</strong>&nbsp;– Como ele é bem tecnológico, pode exigir um pouco mais de paciência na configuração inicial do aplicativo, e o reservatório de pó não é dos maiores, precisando ser esvaziado com frequência.</p>
+
+          <h2 class="wp-block-heading"><strong>WAP Robot W100: O Ajudante Prático do Dia a Dia</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/WAP-Robot-W100-2.webp" alt="Robô Aspirador WAP Robot W100" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/waprobotw100" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>O WAP W100 é aquele modelo que a gente ama pela simplicidade. Ele não tenta ser uma espaçonave, ele quer apenas ser um bom ajudante. É perfeito para quem mora em apartamentos menores e quer manter a poeira sob controle sem ter que aprender a programar um computador.</p>
+
+          <p class="has-base-background-color has-background">✅&nbsp;<strong>Prós</strong>&nbsp;– É super compacto, conseguindo passar por baixo de quase todos os móveis, e o seu valor é muito justo pelo que entrega, sendo uma das melhores opções para quem está comprando o primeiro robô.</p>
+
+          <p class="has-base-background-color has-background">❌&nbsp;<strong>Contra</strong>&nbsp;– Ele não possui mapeamento inteligente, então ele limpa de forma mais aleatória, e sua bateria tem uma autonomia menor, sendo mais indicado para ambientes pequenos.</p>
+
+          <h2 class="wp-block-heading"><strong>iRobot Roomba Combo J7+: O Robô que Pensa por Você</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/iRobot-Roomba-Combo-J7.webp" alt="Robô Aspirador iRobot Roomba Combo J7+" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/irobotroombaj7" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>Se você quer o que há de mais avançado, o Roomba Combo J7+ é outro nível. Ele tem uma tecnologia que identifica objetos, como fios ou brinquedos no chão, e desvia deles automaticamente. É o luxo da tranquilidade de não precisar arrumar a casa antes de colocar o robô para trabalhar.</p>
+
+          <p class="has-base-background-color has-background">✅&nbsp;<strong>Prós</strong>&nbsp;– A capacidade de desviar de obstáculos é imbatível, ele aspira e passa pano com muita eficiência, e a base de autolimpeza é o sonho de qualquer dona de casa, pois você não precisa nem tocar na sujeira.&nbsp;</p>
+
+          <p class="has-base-background-color has-background">❌&nbsp;<strong>Contra</strong>&nbsp;– O investimento inicial é bem mais alto, sendo um produto premium, e ele ocupa um espaço considerável na casa por causa da sua base de descarte.</p>
+
+          <h3 class="wp-block-heading"><strong>Electrolux ERB30: A Confiabilidade que a Gente Conhece</strong></h3>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Electrolux-ERB30.webp" alt="Robô Aspirador Electrolux ERB30" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/electroluxerb30" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>A Electrolux já faz parte da nossa vida há anos, e o ERB30 traz essa segurança. Ele é robusto, fácil de cuidar e faz um trabalho de limpeza muito honesto em pisos frios e laminados, sendo uma escolha segura para quem não quer surpresas.</p>
+
+          <p class="has-base-background-color has-background">✅&nbsp;<strong>Prós</strong>&nbsp;– É muito silencioso comparado aos outros, tem um filtro de excelente qualidade que ajuda muito quem tem alergias, e a assistência técnica da marca é muito fácil de encontrar em qualquer lugar.&nbsp;</p>
+
+          <p class="has-base-background-color has-background">❌&nbsp;<strong>Contra</strong>&nbsp;– Ele não possui a tecnologia de mapeamento avançado, então pode demorar um pouco mais para limpar cômodos muito grandes, e ele não é a melhor opção para tapetes muito grossos.</p>
+
+          <h2 class="wp-block-heading"><strong>Liectroux G7: O Poder da Navegação a Laser</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Liectroux-G7.webp" alt="Robô Aspirador Liectroux G7" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/liectrouxg7" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>O Liectroux G7 é uma surpresa muito positiva. Ele entrega um sistema de navegação a laser de alta precisão por um valor muito mais acessível que os concorrentes da mesma categoria, sendo um ótimo meio-termo entre tecnologia e economia.</p>
+
+          <p class="has-base-background-color has-background">✅&nbsp;<strong>Prós</strong>&nbsp;– O mapeamento a laser funciona perfeitamente, sendo muito rápido para reconhecer os cômodos, e ele possui uma potência de sucção surpreendente que lida muito bem com pelos de animais.</p>
+
+          <p class="has-base-background-color has-background">❌&nbsp;<strong>Contra</strong>&nbsp;– O aplicativo não é tão intuitivo quanto o da Xiaomi, o que pode confundir um pouco no começo, e o acabamento plástico dele parece um pouco mais simples que os modelos premium.</p>
+
+          <hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+          <h2 class="wp-block-heading">Tabela Comparativa Rápida: Os 5 Melhores Lado a Lado</h2>
+
+          <figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Modelo</th><th>Potência (aprox.)</th><th>Passa Pano?</th><th>Mapeamento</th><th>Autonomia (aprox.)</th><th>Ideal Para</th></tr></thead><tbody><tr><td><strong><a href="http://topaspirador.com.br/xiaomirobots10" target="_blank" rel="noreferrer noopener">Xiaomi S10</a></strong></td><td>4.000 Pa</td><td>Sim</td><td>Laser (LiDAR)</td><td>130 min</td><td>Equilíbrio e tecnologia</td></tr><tr><td><strong><a href="http://topaspirador.com.br/waprobotw100" target="_blank" rel="noreferrer noopener">WAP W100</a></strong></td><td>1.400 Pa</td><td>Sim</td><td>Aleatório</td><td>90 min</td><td>Orçamento limitado</td></tr><tr><td><strong><a href="http://topaspirador.com.br/irobotroombaj7" target="_blank" rel="noreferrer noopener">Roomba J7+</a></strong></td><td>Não divulgado</td><td>Sim (avançado)</td><td>Câmera (vSLAM)</td><td>90 min</td><td>Automação total</td></tr><tr><td><strong><a href="http://topaspirador.com.br/electroluxerb30" target="_blank" rel="noreferrer noopener">Electrolux ERB30</a></strong></td><td>2.200 Pa</td><td>Sim</td><td>Giroscópio</td><td>120 min</td><td>Donos de pets e alérgicos</td></tr><tr><td><strong><a href="http://topaspirador.com.br/liectrouxg7" target="_blank" rel="noreferrer noopener">Liectroux G7</a></strong></td><td>6.500 Pa</td><td>Sim (vibratório)</td><td>Laser (LiDAR)</td><td>150 min</td><td>Limpeza pesada e pano</td></tr></tbody></table></figure>
+
+          <h2 class="wp-block-heading"><strong>Guia de Compra: Decifrando a Tecnologia Para Não Errar na Escolha</strong></h2>
+
+          <p>Na hora de escolher, o segredo não é o mais caro, mas o que cabe na sua rotina. Se você tem muitos móveis baixos, foque na altura do robô. Se tem pets, olhe a potência de sucção e a facilidade de limpar a escova. Se sua casa é grande, o mapeamento a laser é obrigatório para ele não se perder. E nunca esqueça de olhar a facilidade de encontrar filtros e peças de reposição, porque esse robô vai trabalhar todo dia e vai precisar de manutenção!</p>
+
+          <h3 class="wp-block-heading"><strong>Conclusão: Qual o Veredito Final?</strong></h3>
+
+          <p>Se você quer o máximo de tecnologia e não se importa em investir, o Roomba J7+ é a escolha. Se quer um equilíbrio perfeito entre tecnologia e valor, o Xiaomi S10 ou o Liectroux G7 vão te deixar muito feliz. Agora, se o foco é praticidade imediata e custo baixo, o WAP W100 ou o Electrolux ERB30 são seus melhores amigos. O melhor robô é aquele que tira o peso das suas costas e te devolve tempo para fazer o que você realmente ama.</p>
+
+          <h2 class="wp-block-heading">Perguntas Frequentes (FAQ)</h2>
+
+          <div class="schema-faq wp-block-yoast-faq-block">
+            <div class="schema-faq-section">
+              <strong class="schema-faq-question"><strong>Qual a melhor marca de robô aspirador?</strong></strong> 
+              <p class="schema-faq-answer">Marcas como Xiaomi, iRobot (Roomba), WAP e Electrolux são as mais confiáveis e com melhor suporte no Brasil. A Xiaomi se destaca pelo custo-benefício em tecnologia, enquanto a iRobot lidera em inovação e robustez.</p> 
+            </div> 
+            <div class="schema-faq-section">
+              <strong class="schema-faq-question"><strong>Robô aspirador substitui a faxina tradicional?</strong></strong> 
+              <p class="schema-faq-answer">Não 100%. Ele é uma ferramenta de manutenção poderosa que vai espaçar enormemente a necessidade de uma faxina pesada. Você ainda precisará limpar cantos específicos e talvez fazer uma limpeza profunda mensalmente.</p> 
+            </div> 
+            <div class="schema-faq-section">
+              <strong class="schema-faq-question"><strong>Pode usar produto de limpeza no reservatório de água?</strong></strong> 
+              <p class="schema-faq-answer"><strong>Não!</strong>&nbsp;Use apenas água. Produtos químicos podem danificar permanentemente os componentes internos do robô.</p> 
+            </div> 
+            <div class="schema-faq-section">
+              <strong class="schema-faq-question"><strong>Ele funciona no escuro?</strong></strong> 
+              <p class="schema-faq-answer">Modelos com navegação a laser (LiDAR) funcionam perfeitamente no escuro. Modelos que usam câmera (vSLAM) precisam de um mínimo de luz para navegar com precisão.</p> 
+            </div> 
+            <div class="schema-faq-section">
+              <strong class="schema-faq-question"><strong>Faz muito barulho?</strong></strong> 
+              <p class="schema-faq-answer">Eles fazem menos barulho que um aspirador tradicional. O ruído é comparável ao de um ventilador ou micro-ondas. Muitos modelos possuem um modo silencioso com potência reduzida.</p> 
+            </div> 
+          </div>
+
+          <p style="text-align: center;"><em>E agora, me conta aqui: qual desses modelos mais te chamou a atenção para a sua casa?&nbsp;<strong>Deixe o seu comentário logo abaixo!</strong>&nbsp;Eu adoro ouvir as experiências de vocês e estou aqui para te ajudar a decidir. Vamos deixar essa casa brilhando juntas?</em></p>
+
+          <p style="text-align: center; background-color: #f1f3f5; padding: 15px; border-radius: 8px;"><em>🔎&nbsp;<strong>Transparência:</strong>&nbsp;Como Associado da Amazon, o TopAspiradore recebe uma pequena comissão por compras qualificadas feitas através dos nossos links. Você não paga nem um centavo a mais por isso e ainda nos ajuda a manter nossas dicas de limpeza sempre gratuitas e atualizadas. Muito obrigada pelo seu apoio!</em></p>
+
+          <!-- SEÇÃO DE COMENTÁRIOS (FORMSPREE) -->
+          <section class="comment-section">
+            <h2 class="wp-block-heading">Dúvidas ou Sugestões? Deixe um comentário!</h2>
+            <form action="https://formspree.io/f/meevbyol" method="POST" class="comment-form">
+              <input type="text" name="name" placeholder="Seu Nome" required />
+              <input type="email" name="email" placeholder="Seu E-mail" required />
+              <textarea name="message" rows="4" placeholder="Sua dúvida ou comentário..." required></textarea>
+              <button type="submit" class="comment-btn">Enviar para Moderação</button>
+            </form>
+          </section>
+
+        </article>
+      </div>
+    </main>
+
+    <!-- RODAPÉ OTIMIZADO (CONFORME PRINT 01) -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><img src="/logo.webp" alt="Logo Top Aspirador" /></div>
+          <p class="footer-description">Especialistas em tecnologia de limpeza. Analisamos os melhores aspiradores do mercado para garantir a escolha certa para seu lar.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="/aspirador-robo">Aspiradores Robô</a></li>
+            <li><a href="/aspirador-vertical">Aspiradores Verticais</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul class="footer-links">
+            <li><a href="/sobre-nos">Sobre Nós</a></li>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/politica-privacidade">Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato Oficial</h4>
+          <address>
+            <strong>Top Aspirador</strong><br />
+            Av. Pres. Vargas, 435 – Centro<br />
+            Rio de Janeiro – RJ, 20071-003<br />
+            topaspirador@gmail.com
+          </address>
+        </div>
+      </div>
+      <div class="amazon-disclaimer">
+        <p>O site Top Aspirador participa do Programa de Associados da Amazon. Ganhamos comissões sobre compras qualificadas.</p>
+        <p>© 2026 Top Aspirador - Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+  </body>
 </html>
