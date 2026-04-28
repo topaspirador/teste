@@ -1,5 +1,5 @@
 ---
-// index.astro dentro da pasta aspirador-robo - VERSÃO INTEGRAL WP + COMENTÁRIOS
+// index.astro dentro da pasta aspirador-robo - VERSÃO FINAL CORRIGIDA (MOBILE SCALE FIX)
 const title = "O Guia Definitivo: Como Escolher o Melhor Robô Aspirador em 2026 (Análise de Especialistas)";
 const description = "Análise sincera dos melhores robôs aspiradores testados em casas reais. Comparativo, prós, contras e guia de compra.";
 ---
@@ -8,7 +8,7 @@ const description = "Análise sincera dos melhores robôs aspiradores testados e
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@ const description = "Análise sincera dos melhores robôs aspiradores testados e
         "@type": "Article",
         "headline": "O Guia Definitivo: Como Escolher o Melhor Robô Aspirador em 2026",
         "image": ["https://topaspirador.com.br/wp-content/uploads/2026/03/Xiaomi-Robot-Vacuum-X10-1.webp"],
-        "author": { "@type": "Person", "name": "Top Aspirador" },
+        "author": { "@type": "Person", "name": "Especialista TopAspirador" },
         "publisher": {
           "@type": "Organization",
           "name": "Top Aspirador",
@@ -30,15 +30,18 @@ const description = "Análise sincera dos melhores robôs aspiradores testados e
     </script>
 
     <style>
-      /* DESIGN BLOQUEADO - PC */
+      /* DESIGN PC - BLOQUEADO */
       body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
       header.main-header { background: #ffffff; padding: 10px 20px; border-bottom: 1px solid #eee; text-align: center; }
       .logo-title-container { display: flex; align-items: center; justify-content: center; gap: 20px; max-width: 1300px; margin: 0 auto; }
       .logo-area img { width: 500px; height: auto; display: block; }
       .logo-title-container h1 { font-family: 'Exo 2', sans-serif; font-size: 1.4rem; margin: 0; color: #003566; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+      
       nav { background: #1a1a1a; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-      .nav-links a { color: #ffffff; margin: 0 12px; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+      .nav-links { display: flex; justify-content: center; gap: 15px; }
+      .nav-links a { color: #ffffff; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
       .nav-links a:hover { color: #00d4ff; }
+      
       .tagline { text-align: center; padding: 25px 20px 5px 20px; font-style: italic; color: #636e72; font-size: 1.1rem; }
       
       .container { max-width: 1000px; margin: 0 auto; padding: 20px 20px 60px; flex: 1; }
@@ -68,9 +71,9 @@ const description = "Análise sincera dos melhores robôs aspiradores testados e
       .comment-btn { background-color: #003566; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
 
       /* RODAPÉ PRINT 01 */
-      footer { background-color: #ffffff; border-top: 1px solid #e1e8ed; padding: 40px 0; margin-top: 50px; }
-      .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 30px; padding: 0 20px; }
-      .footer-logo img { max-width: 180px; height: auto; margin-bottom: 15px; }
+      footer { background-color: #ffffff; border-top: 1px solid #e1e8ed; padding: 40px 0; margin-top: 50px; color: #444; }
+      .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 30px; padding: 0 20px; text-align: left; }
+      .footer-logo img { max-width: 180px; height: auto; margin-bottom: 15px; display: block; }
       .footer-col h4 { color: #111; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; }
       .footer-links { list-style: none; padding: 0; margin: 0; }
       .footer-links li { margin-bottom: 10px; }
@@ -78,13 +81,33 @@ const description = "Análise sincera dos melhores robôs aspiradores testados e
       address { font-style: normal; font-size: 0.85rem; line-height: 1.6; color: #666; }
       .amazon-disclaimer { max-width: 1100px; margin: 30px auto 0; padding: 20px; border-top: 1px solid #eee; font-size: 0.7rem; color: #999; text-align: center; }
 
-      /* AJUSTE MOBILE (SEM ESPAÇO) */
-      @media (max-width: 850px) {
+      /* ==========================================
+         AJUSTE MOBILE (FIX DE ESCALA E CORTE)
+         ========================================== */
+      @media (max-width: 600px) {
+        /* Fix do Menu que estava cortado */
+        .nav-links { flex-wrap: wrap; gap: 8px; padding: 0 10px; }
+        .nav-links a { font-size: 10px; }
+
+        /* Fix da Logo e H1 superior */
         .logo-title-container { flex-direction: column; gap: 0px; }
-        .logo-area img { width: 80%; }
-        .logo-title-container h1 { font-size: 1.2rem; text-align: center; margin-top: -10px; }
-        .article-box { padding: 20px; }
+        .logo-area img { width: 85%; margin: 0 auto; }
+        .logo-title-container h1 { font-size: 1.1rem; text-align: center; margin-top: -10px; padding: 0 10px; }
+
+        /* Fix do Artigo que estava 'grande' */
+        .container { padding: 10px; width: 100%; box-sizing: border-box; }
+        .article-box { padding: 20px 15px; border-radius: 8px; width: 100%; box-sizing: border-box; }
+        
+        /* Reduzindo o título do post para caber na tela */
+        h1.wp-block-heading { font-size: 1.4rem !important; line-height: 1.3; }
+        h2.wp-block-heading { font-size: 1.2rem !important; }
+        p { font-size: 1rem !important; line-height: 1.6; }
+
+        /* Ajuste dos cards de produto do WordPress para não estourarem a largura */
+        div[style*="max-width: 400px"] { max-width: 100% !important; margin: 20px 0 !important; }
+        
         .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        .footer-logo img { margin: 0 auto 15px; }
       }
     </style>
   </head>
@@ -108,7 +131,7 @@ const description = "Análise sincera dos melhores robôs aspiradores testados e
     <main class="container">
       <div class="article-box">
         <article>
-          <!-- CONTEÚDO ORIGINAL DO WORDPRESS NA ÍNTEGRA -->
+          <!-- CONTEÚDO WP NA ÍNTEGRA - SEM MUDAR UMA VÍRGULA -->
           
           <h1 class="wp-block-heading">O Guia Definitivo: Como Escolher o Melhor Robô Aspirador em 2026 (Análise de Especialistas)</h1>
 
