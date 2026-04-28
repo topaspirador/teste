@@ -1,0 +1,342 @@
+---
+const title = "Fale Conosco - Top Aspirador";
+const description = "Entre em contato com o Top Aspirador. Dúvidas, sugestões ou críticas sobre aspiradores de pó. Sua opinião é muito importante!";
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://topaspirador.com.br/contato" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* ========== CABEÇALHO ========== */
+    .header {
+      background-color: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #222;
+      letter-spacing: 2px;
+    }
+
+    .slogan {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0.5rem 0;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-menu a:hover {
+      color: #f90;
+    }
+
+    /* ========== CONTEÚDO PRINCIPAL ========== */
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 0.8rem;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .contact-list {
+      background: #f9f9f9;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ========== FORMULÁRIO ========== */
+    .contact-form {
+      background: #f5f5f5;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-submit {
+      background-color: #FFD814;
+      color: #111;
+      border: 1px solid #FCD200;
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.2s;
+    }
+
+    .btn-submit:hover {
+      background-color: #e6c200;
+    }
+
+    /* ========== RODAPÉ ========== */
+    .footer {
+      background-color: #f5f5f5;
+      border-top: 1px solid #e5e7eb;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+    }
+
+    .footer-col h3 {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+      color: #555;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-col a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-col a:hover {
+      color: #f90;
+    }
+
+    .footer-disclaimer {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      padding-top: 1.2rem;
+    }
+
+    /* ========== RESPONSIVO ========== */
+    @media (max-width: 600px) {
+      .header {
+        padding: 1rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .nav-menu {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .footer-columns {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="logo">TOP ASPIRADOR</div>
+    <div class="slogan">GUIA E ANÁLISE DE PRODUTOS</div>
+    <nav>
+      <ul class="nav-menu" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <li><a href="/" itemprop="url">HOME</a></li>
+        <li><a href="/robos" itemprop="url">ROBÔS</a></li>
+        <li><a href="/verticais" itemprop="url">VERTICAIS</a></li>
+        <li><a href="/sobre" itemprop="url">SOBRE</a></li>
+        <li><a href="/contato" itemprop="url">CONTATO</a></li>
+        <li><a href="/privacidade" itemprop="url">PRIVACIDADE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container" itemscope itemtype="https://schema.org/ContactPage">
+    
+    <h1 itemprop="name">Fale Conosco</h1>
+    
+    <p>A sua opinião é muito importante para nós! Este espaço foi criado para que você, leitor do <a href="http://topaspirador.com.br/" target="_blank" rel="noopener" title="topaspirador">topaspirador</a>, possa enviar suas dúvidas, sugestões, críticas ou qualquer outro assunto que deseje compartilhar. Nós valorizamos a sua participação e estamos sempre abertos ao diálogo.</p>
+
+    <h2>Nossa Missão</h2>
+    <p>No topaspirador, nossa missão é simplificar a sua vida, oferecendo análises honestas e detalhadas sobre os mais variados modelos de aspiradores de pó do mercado. Acreditamos que uma casa limpa contribui para o bem-estar e, por isso, nos dedicamos a testar e avaliar cada produto com o máximo de critério e imparcialidade. Queremos que você faça a melhor escolha para as suas necessidades.</p>
+
+    <p><strong>E-mail:</strong></p>
+    <p>Para um contato mais direto, você pode nos enviar um e-mail para: <a href="mailto:topaspirador@gmail.com">topaspirador@gmail.com</a></p>
+
+    <h2>Nossas Informações (NAP)</h2>
+    <p>Para garantir a transparência e a confiabilidade do nosso trabalho, compartilhamos nossas informações de contato e localização. A consistência desses dados é importante para nós.</p>
+
+    <ul class="contact-list" itemscope itemtype="https://schema.org/Organization">
+      <li><strong>Nome do Blog/Empresa:</strong> <span itemprop="name">Top Aspirador</span></li>
+      <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <strong>Endereço:</strong> 
+        <span itemprop="streetAddress">Av. Pres. Vargas, 435 - Centro</span><br>
+        <span itemprop="addressLocality">Rio de Janeiro</span> - <span itemprop="addressRegion">RJ</span>, <span itemprop="postalCode">20071-003</span>
+      </li>
+      <li><strong>Email:</strong> <a href="mailto:topaspirador@gmail.com" itemprop="email">topaspirador@gmail.com</a></li>
+    </ul>
+
+    <!-- FORMULÁRIO DO FORMSPREE -->
+    <div class="contact-form">
+      <h2 style="margin-top:0;">Envie sua mensagem</h2>
+      <form action="https://formspree.io/f/meevbyol" method="POST">
+        <div class="form-group">
+          <label for="name">Seu Nome *</label>
+          <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Seu E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Sua dúvida ou comentário</label>
+          <textarea id="message" name="message" placeholder="Escreva aqui..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h3>CATEGORIAS</h3>
+        <ul>
+          <li><a href="/robos">Robôs</a></li>
+          <li><a href="/verticais">Verticais</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>INSTITUCIONAL</h3>
+        <ul>
+          <li><a href="/sobre">Sobre Nós</a></li>
+          <li><a href="/contato">Contato</a></li>
+          <li><a href="/privacidade">Privacidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" itemscope itemtype="https://schema.org/Organization">
+        <h3>CONTATO OFICIAL</h3>
+        <ul>
+          <li itemprop="name"><strong>Top Aspirador</strong></li>
+          <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">Av. Pres. Vargas, 435 – Centro</span><br>
+            <span itemprop="addressLocality">Rio de Janeiro</span> – <span itemprop="addressRegion">RJ</span>, <span itemprop="postalCode">20071-003</span>
+          </li>
+          <li><a href="mailto:topaspirador@gmail.com" itemprop="email">topaspirador@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      Especialistas em tecnologia de limpeza. Analisamos os melhores produtos para seu lar.<br><br>
+      O site Top Aspirador participa do Programa de Associados da Amazon. Ganhamos comissões sobre compras qualificadas.<br><br>
+      © 2026 Top Aspirador - Todos os direitos reservados.
+    </p>
+  </footer>
+
+</body>
+</html>
