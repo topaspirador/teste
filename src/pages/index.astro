@@ -1,192 +1,59 @@
 ---
-// index.astro - VERSÃO FINAL: PC & MOBILE INTOCADOS + RODAPÉ E-E-A-T
+// index.astro - HOME CONECTADA ÀS SILOS
+const title = "Top Aspirador | Melhores Análises e Guias";
+const description = "Análise sincera dos melhores robôs aspiradores testados em casas reais.";
 ---
+
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Top Aspirador | Melhores Análises e Guias</title>
-    <!-- Fontes Tech que combinam com a logo -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      /* ==========================================
-         CONFIGURAÇÃO PARA PC (MANTIDA IGUAL)
-         ========================================== */
-      body { 
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-        background-color: #f4f7f9; 
-        margin: 0; 
-        padding: 0; 
-        color: #333; 
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      header.main-header {
-        background: #ffffff;
-        padding: 10px 20px;
-        border-bottom: 1px solid #eee;
-      }
-
-      .logo-title-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        max-width: 1300px;
-        margin: 0 auto;
-      }
-
-      .logo-area img {
-        width: 500px; /* TAMANHO GIGANTE QUE VOCÊ APROVOU */
-        height: auto;
-        display: block;
-      }
-
-      .logo-title-container h1 {
-        font-family: 'Exo 2', sans-serif;
-        font-size: 1.4rem;
-        margin: 0;
-        color: #003566; 
-        font-weight: 800;
-        line-height: 1.1;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      nav { 
-        background: #1a1a1a; 
-        padding: 15px 0; 
-        text-align: center; 
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      }
-      
-      .nav-links a { 
-        color: #ffffff; 
-        margin: 0 12px; 
-        text-decoration: none; 
-        font-size: 12px; 
-        font-weight: 700;
-        text-transform: uppercase;
-      }
+      /* DESIGN BLOQUEADO - NÃO MEXER */
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
+      header.main-header { background: #ffffff; padding: 10px 20px; border-bottom: 1px solid #eee; text-align: center; }
+      .logo-title-container { display: flex; align-items: center; justify-content: center; gap: 20px; max-width: 1300px; margin: 0 auto; }
+      .logo-area img { width: 500px; height: auto; display: block; }
+      .logo-title-container h1 { font-family: 'Exo 2', sans-serif; font-size: 1.4rem; margin: 0; color: #003566; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+      nav { background: #1a1a1a; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links a { color: #ffffff; margin: 0 12px; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
       .nav-links a:hover { color: #00d4ff; }
+      .tagline-container { text-align: center; padding: 25px 20px 5px 20px; }
+      .tagline-container p { margin: 0; color: #636e72; font-size: 1.1rem; font-style: italic; }
 
-      .tagline-container {
-        text-align: center;
-        padding: 25px 20px 5px 20px;
-      }
-      .tagline-container p {
-        margin: 0;
-        color: #636e72;
-        font-size: 1.1rem;
-        font-style: italic;
-      }
-
-      .container { 
-        max-width: 1100px; 
-        margin: 0 auto; 
-        padding: 20px 20px 60px; 
-        flex: 1; /* Garante que o rodapé fique no fim */
-      }
-
-      .grid { 
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 25px; 
-      }
-
-      .card { 
-        background: #ffffff; 
-        border-radius: 12px; 
-        overflow: hidden; 
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
-        display: flex; 
-        flex-direction: column;
-      }
-      .card img { width: 100%; height: 200px; object-fit: cover; }
+      /* GRADE DE PRODUTOS */
+      .container { max-width: 1100px; margin: 0 auto; padding: 20px 20px 60px; flex: 1; }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+      
+      /* ESTILO DO CARTÃO COM LINK */
+      .card { background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.3s; }
+      .card:hover { transform: translateY(-5px); }
+      .card img { width: 100%; height: 200px; object-fit: cover; background-color: #eee; }
       .card-body { padding: 25px; text-align: center; }
       .card h2 { margin: 0 0 12px 0; font-size: 1.1rem; color: #d35400; font-weight: bold; line-height: 1.3; }
       .card p { margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
 
-      /* ==========================================
-         RODAPÉ (FOOTER) - NOVO E OTIMIZADO
-         ========================================== */
-      footer {
-        background-color: #ffffff;
-        border-top: 1px solid #e1e8ed;
-        padding: 40px 0 20px 0;
-        margin-top: 40px;
-        color: #444;
-      }
-
-      .footer-grid {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-        gap: 30px;
-        padding: 0 20px;
-      }
-
-      .footer-logo img {
-        max-width: 180px;
-        height: auto;
-        margin-bottom: 5px; /* Bem próximo da descrição */
-      }
-
-      .footer-description {
-        font-size: 0.85rem;
-        line-height: 1.4;
-        color: #666;
-        margin: 0;
-      }
-
-      .footer-col h4 {
-        color: #111;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-      }
-
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .footer-links li { margin-bottom: 8px; }
+      /* RODAPÉ PRINT 01 */
+      footer { background-color: #ffffff; border-top: 1px solid #e1e8ed; padding: 40px 0; margin-top: 50px; }
+      .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 30px; padding: 0 20px; }
+      .footer-logo img { max-width: 180px; height: auto; margin-bottom: 15px; }
+      .footer-col h4 { color: #111; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; }
+      .footer-links { list-style: none; padding: 0; margin: 0; }
+      .footer-links li { margin-bottom: 10px; }
       .footer-links a { text-decoration: none; color: #666; font-size: 0.85rem; }
-      .footer-links a:hover { color: #d35400; }
+      address { font-style: normal; font-size: 0.85rem; line-height: 1.6; color: #666; }
+      .amazon-disclaimer { max-width: 1100px; margin: 30px auto 0; padding: 20px; border-top: 1px solid #eee; font-size: 0.7rem; color: #999; text-align: center; }
 
-      address { font-style: normal; font-size: 0.85rem; line-height: 1.5; color: #666; }
-
-      .amazon-disclaimer {
-        max-width: 1100px;
-        margin: 30px auto 0;
-        padding: 20px;
-        border-top: 1px solid #eee;
-        font-size: 0.7rem;
-        color: #999;
-        text-align: center;
-      }
-
-      /* ==========================================
-         AJUSTE MOBILE (MANTIDO E MELHORADO)
-         ========================================== */
       @media (max-width: 850px) {
         .logo-title-container { flex-direction: column; gap: 0px; }
-        .logo-area img { width: 80%; max-width: 300px; margin: 0 auto; }
-        .logo-title-container h1 { font-size: 1.2rem; text-align: center; margin-top: -10px; padding: 0 10px; }
+        .logo-area img { width: 80%; }
+        .logo-title-container h1 { font-size: 1.2rem; text-align: center; margin-top: -10px; }
         .grid { grid-template-columns: 1fr; }
-        .nav-links { gap: 8px; }
-        .nav-links a { font-size: 10px; margin: 0 3px; }
-        /* Rodapé Mobile */
         .footer-grid { grid-template-columns: 1fr; text-align: center; }
-        .footer-logo img { margin: 0 auto 5px; }
       }
     </style>
   </head>
@@ -194,23 +61,14 @@
 
     <header class="main-header">
       <div class="logo-title-container">
-        <div class="logo-area">
-          <a href="/">
-            <img src="/logo.webp" alt="Top Aspirador" />
-          </a>
-        </div>
-        <h1>Guia e Análise de Produtos</h1>
+        <div class="logo-area"><a href="/"><img src="/logo.webp" alt="Top Aspirador" /></a></div>
+        <h1>Guia e Análise<br/>de Produtos</h1>
       </div>
     </header>
 
     <nav>
       <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/aspirador-robo">Robôs</a>
-        <a href="/aspirador-vertical">Verticais</a>
-        <a href="/sobre-nos">Sobre</a>
-        <a href="/contato">Contato</a>
-        <a href="/politica-privacidade">Privacidade</a>
+        <a href="/">Home</a><a href="/aspirador-robo">Robôs</a><a href="/aspirador-vertical">Verticais</a><a href="/sobre-nos">Sobre</a><a href="/contato">Contato</a><a href="/politica-privacidade">Privacidade</a>
       </div>
     </nav>
 
@@ -220,82 +78,49 @@
 
     <main class="container">
       <div class="grid">
-        <!-- Card 1 -->
-        <div class="card">
-          <img src="https://picsum.photos/id/160/500/350" alt="Review">
+        
+        <!-- CARD 1: ROBÔS (CONECTADO AO SEU ARTIGO) -->
+        <a href="/aspirador-robo" class="card">
+          <img src="/capa-robo.webp" alt="Melhores Robôs Aspiradores 2026">
           <div class="card-body">
             <h2>Melhor Aspirador Robô de 2026: Análise Completa</h2>
-            <p>Descubra qual o modelo mais eficiente para sua casa.</p>
+            <p>Descubra qual o modelo mais eficiente para manter sua casa limpa sem esforço.</p>
           </div>
-        </div>
+        </a>
 
-        <!-- Card 2 -->
-        <div class="card">
-          <img src="https://picsum.photos/id/20/500/350" alt="Review">
+        <!-- CARD 2: VERTICAIS (CONECTADO AO SEU ARTIGO) -->
+        <a href="/aspirador-vertical" class="card">
+          <img Vigilance src="/capa-vertical.webp" alt="Melhores Aspiradores Verticais 2026">
           <div class="card-body">
             <h2>Melhor Aspirador Vertical: Potência e Praticidade</h2>
-            <p>Testamos a bateria e a sucção dos modelos mais vendidos.</p>
+            <p>Testamos a bateria e a sucção dos modelos mais vendidos este ano.</p>
+          </div>
+        </a>
+
+        <!-- CARD 3: ACESSÓRIOS (EXEMPLO) -->
+        <div class="card">
+          <img src="https://picsum.photos/id/1/500/350" alt="Dicas de Limpeza">
+          <div class="card-body">
+            <h2>Dicas de Manutenção: Faça seu aparelho durar mais</h2>
+            <p>Pequenos cuidados que evitam gastos com assistência técnica.</p>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card">
-          <img src="https://picsum.photos/id/1/500/350" alt="Review">
-          <div class="card-body">
-            <h2>Aspirador Portátil: Vale a pena o investimento?</h2>
-            <p>O review sincero sobre o modelo ideal para carros e estofados.</p>
-          </div>
-        </div>
       </div>
     </main>
 
-    <!-- RODAPÉ OTIMIZADO CONFORME DOCUMENTAÇÃO -->
     <footer>
       <div class="footer-grid">
-        <!-- Coluna 1: Logo e Descrição (Expertise) -->
         <div class="footer-col">
-          <div class="footer-logo">
-            <img src="/logo.webp" alt="Logo Top Aspirador" />
-          </div>
-          <p class="footer-description">
-            Especialistas em tecnologia de limpeza. Analisamos os melhores aspiradores do mercado para garantir a escolha certa para seu lar.
-          </p>
+          <div class="footer-logo"><img src="/logo.webp" alt="Logo Top Aspirador" /></div>
+          <p class="footer-description">Especialistas em tecnologia de limpeza. Analisamos os melhores produtos para seu lar.</p>
         </div>
-
-        <!-- Coluna 2: SILOs -->
-        <div class="footer-col">
-          <h4>Categorias</h4>
-          <ul class="footer-links">
-            <li><a href="/aspirador-robo">Aspiradores Robô</a></li>
-            <li><a href="/aspirador-vertical">Aspiradores Verticais</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 3: Institucional -->
-        <div class="footer-col">
-          <h4>Institucional</h4>
-          <ul class="footer-links">
-            <li><a href="/sobre-nos">Sobre Nós</a></li>
-            <li><a href="/contato">Contato</a></li>
-            <li><a href="/politica-privacidade">Privacidade</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 4: NAP (Authority & Trust) -->
-        <div class="footer-col">
-          <h4>Contato Oficial</h4>
-          <address>
-            <strong>Top Aspirador</strong><br />
-            Av. Pres. Vargas, 435 – Centro<br />
-            Rio de Janeiro – RJ, 20071-003<br />
-            <a href="mailto:topaspirador@gmail.com">topaspirador@gmail.com</a>
-          </address>
-        </div>
+        <div class="footer-col"><h4>Categorias</h4><ul class="footer-links"><li><a href="/aspirador-robo">Robôs</a></li><li><a href="/aspirador-vertical">Verticais</a></li></ul></div>
+        <div class="footer-col"><h4>Institucional</h4><ul class="footer-links"><li><a href="/sobre-nos">Sobre Nós</a></li><li><a href="/contato">Contato</a></li><li><a href="/politica-privacidade">Privacidade</a></li></ul></div>
+        <div class="footer-col"><h4>Contato Oficial</h4><address><strong>Top Aspirador</strong><br />Av. Pres. Vargas, 435 – Centro<br />Rio de Janeiro – RJ, 20071-003<br />topaspirador@gmail.com</address></div>
       </div>
-
-      <!-- Disclaimer Amazon -->
       <div class="amazon-disclaimer">
-        <p>O site Top Aspirador participa do Programa de Associados da Amazon. Como associados da Amazon, ganhamos comissões sobre compras qualificadas feitas através de nossos links.</p>
+        <p>O site Top Aspirador participa do Programa de Associados da Amazon. Ganhamos comissões sobre compras qualificadas.</p>
         <p>© 2026 Top Aspirador - Todos os direitos reservados.</p>
       </div>
     </footer>
