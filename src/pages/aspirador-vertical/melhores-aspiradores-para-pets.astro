@@ -1,0 +1,370 @@
+---
+// src/pages/aspirador-vertical/melhores-aspiradores-para-pets.astro
+const title = "Os Melhores Aspiradores para Quem Tem Pets em 2026: Análise de Especialista";
+const description = "Vença a batalha contra os pelos! Analisamos os melhores aspiradores de 2026 para quem tem cães e gatos em casa.";
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- SCHEMA.ORG (SEO TÉCNICO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Os Melhores Aspiradores para Quem Tem Pets em 2026: Análise de Especialista",
+        "image": ["https://topaspirador.com.br/wp-content/uploads/2026/03/aspirador-vertical-electrolux-stk15-limpando-casa.webp"],
+        "author": { "@type": "Person", "name": "Especialista TopAspirador" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Top Aspirador",
+          "logo": { "@type": "ImageObject", "url": "https://topaspirador.com.br/logo.webp" }
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual aspirador é melhor para quem tem alergia a pelos de pet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sempre escolha modelos com filtro HEPA, como o Electrolux STK15 ou o WAP Power Speed, pois eles retêm as partículas microscópicas que causam as alergias."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O robô aspirador consegue mesmo tirar todos os pelos do tapete?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ele é excelente para a manutenção diária, mas para tapetes muito felpudos, nada substitui a potência de sucção de um aspirador vertical com escova rotativa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como evitar que os pelos enrosquem nas escovas do robô?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A limpeza semanal das escovas é essencial. Se o seu pet solta muito pelo, opte por modelos que possuem tecnologias anti-enrosco ou escovas de borracha."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      /* DESIGN BLOQUEADO - PC */
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
+      header.main-header { background: #ffffff; padding: 10px 20px; border-bottom: 1px solid #eee; text-align: center; }
+      .logo-title-container { display: flex; align-items: center; justify-content: center; gap: 20px; max-width: 1300px; margin: 0 auto; }
+      .logo-area img { width: 500px; height: auto; display: block; }
+      .logo-title-container h1 { font-family: 'Exo 2', sans-serif; font-size: 1.4rem; margin: 0; color: #003566; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+      nav { background: #1a1a1a; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links { display: flex; justify-content: center; gap: 15px; }
+      .nav-links a { color: #ffffff; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+      .nav-links a:hover { color: #00d4ff; }
+      .tagline { text-align: center; padding: 25px 20px 5px 20px; font-style: italic; color: #636e72; font-size: 1.1rem; }
+      
+      .container { max-width: 1000px; margin: 0 auto; padding: 20px 20px 60px; flex: 1; }
+      .article-box { background: #ffffff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+      
+      /* ESTILOS WP INTEGRAL */
+      .wp-block-heading { font-family: 'Exo 2', sans-serif; margin-top: 30px; }
+      h1.wp-block-heading { font-size: 2.2rem; color: #111; line-height: 1.2; }
+      h2.wp-block-heading { font-size: 1.6rem; color: #003566; border-left: 5px solid #00d4ff; padding-left: 15px; }
+      p { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 20px; }
+      .has-background { padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+      .has-base-background-color { background-color: #f1f3f5; }
+      .aligncenter { display: block; margin: 20px auto; max-width: 100%; height: auto; border-radius: 8px; }
+
+      /* FAQ WP */
+      .schema-faq { background: #f9f9f9; padding: 20px; border-radius: 10px; margin-top: 30px; }
+      .schema-faq-section { margin-bottom: 20px; }
+      .schema-faq-question { display: block; font-weight: bold; color: #003566; margin-bottom: 5px; }
+
+      /* COMENTÁRIOS */
+      .comment-section { margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px; }
+      .comment-form { display: flex; flex-direction: column; gap: 15px; }
+      .comment-form input, .comment-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: sans-serif; }
+      .comment-btn { background-color: #003566; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+
+      /* RODAPÉ PRINT 01 */
+      footer { background-color: #ffffff; border-top: 1px solid #e1e8ed; padding: 40px 0; margin-top: 50px; color: #444; }
+      .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 30px; padding: 0 20px; text-align: left; }
+      .footer-logo img { max-width: 180px; height: auto; margin-bottom: 15px; display: block; }
+      .footer-col h4 { color: #111; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; }
+      .footer-links { list-style: none; padding: 0; margin: 0; }
+      .footer-links li { margin-bottom: 10px; }
+      .footer-links a { text-decoration: none; color: #666; font-size: 0.85rem; }
+      address { font-style: normal; font-size: 0.85rem; line-height: 1.6; color: #666; }
+      .amazon-disclaimer { max-width: 1100px; margin: 30px auto 0; padding: 20px; border-top: 1px solid #eee; font-size: 0.7rem; color: #999; text-align: center; }
+
+      /* AJUSTE MOBILE */
+      @media (max-width: 600px) {
+        .logo-title-container { flex-direction: column; gap: 0px; }
+        .logo-area img { width: 85%; margin: 0 auto; }
+        .logo-title-container h1 { font-size: 1.1rem; text-align: center; margin-top: -5px; padding: 0 10px; }
+        .nav-links { flex-wrap: wrap; gap: 8px; padding: 0 10px; }
+        .nav-links a { font-size: 10px; }
+        .container { padding: 10px; width: 100%; box-sizing: border-box; }
+        .article-box { padding: 20px 15px; border-radius: 8px; width: 100%; box-sizing: border-box; }
+        h1.wp-block-heading { font-size: 1.4rem !important; line-height: 1.3; }
+        h2.wp-block-heading { font-size: 1.2rem !important; }
+        p { font-size: 1rem !important; line-height: 1.6; }
+        div[style*="max-width: 400px"] { max-width: 100% !important; margin: 20px 0 !important; }
+        .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        .footer-logo img { margin: 0 auto 15px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <div class="logo-title-container">
+        <div class="logo-area"><a href="/"><img src="/logo.webp" alt="Top Aspirador" /></a></div>
+        <h1>Guia e Análise<br/>de Produtos</h1>
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-links">
+        <a href="/">Home</a><a href="/aspirador-robo">Robôs</a><a href="/aspirador-vertical">Verticais</a><a href="/sobre-nos">Sobre</a><a href="/contato">Contato</a><a href="/politica-privacidade">Privacidade</a>
+      </div>
+    </nav>
+
+    <div class="tagline"><p>Seu guia especializado em limpeza doméstica</p></div>
+
+    <main class="container">
+      <div class="article-box">
+        <article>
+          <!-- CONTEÚDO WP INTEGRAL -->
+          <h1 class="wp-block-heading"><strong>O Guia Definitivo do Aspirador Vertical em 2026: Análise de Especialistas dos 04 Melhores Modelos</strong></h1>
+
+          <figure class="wp-block-image aligncenter size-full is-resized"><img src="https://topaspirador.com.br/wp-content/uploads/2026/03/aspirador-vertical-electrolux-stk15-limpando-casa.webp" alt="Mulher de 30 anos limpando a sala de estar com aspirador vertical Electrolux PowerSpeed Ultra STK15" class="wp-image-565" style="aspect-ratio:1.7921661031998088;width:637px;height:auto"/></figure>
+
+          <p>Quem ama animais sabe que o amor é incondicional, mas a quantidade de pelos que eles espalham pela casa pode ser um desafio diário. Parece que, não importa o quanto a gente limpe, sempre tem um tufo de pelo escondido atrás do sofá ou grudado na almofada. Se você já se sentiu vencida pela batalha dos pelos, saiba que o segredo não é limpar mais, mas sim usar a ferramenta certa. Como especialista que entende essa rotina, analisei os melhores aspiradores de 2026 para quem divide a casa com cães e gatos, focando em modelos que realmente dão conta do recado.</p>
+
+          <p class="has-text-align-center has-base-background-color has-background" style="font-size:16px">🔎 Transparência: Como Associado da Amazon, o TopAspirador recebe uma pequena comissão por compras qualificadas feitas através dos nossos links. Você não paga nem um centavo a mais por isso e ainda nos ajuda a manter nossas dicas de limpeza sempre gratuitas e atualizadas. Muito obrigada pelo apoio!</p>
+
+          <h2 class="wp-block-heading"><strong>Electrolux PowerSpeed Ultra (STK15): O Aliado da Praticidade</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Electrolux-PowerSpeed-Ultra-STK15.webp" alt="Aspirador Electrolux PowerSpeed Ultra STK15" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/aspiradorelectrostk15" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>O STK15 é aquele tipo de aspirador que a gente tem vontade de abraçar. Ele é leve, potente e muito fácil de usar. Para quem tem pets que soltam pelos curtos ou médios, ele é uma mão na roda porque você consegue passar em todo lugar da casa em poucos minutos.</p>
+
+          <h3 class="wp-block-heading"><strong>Ficha Técnica do Electrolux STK15</strong></h3>
+
+          <p>Ele vem com mil e trezentos watts de potência, um reservatório de um litro e seiscentos mililitros e o indispensável filtro HEPA, que é essencial para quem tem rinite alérgica causada pelos pelos dos animais.</p>
+
+          <h3 class="wp-block-heading"><strong>Prós do STK15</strong></h3>
+
+          <p>✅ O grande destaque é o filtro HEPA que retém os alérgenos dos animais, além de ser extremamente leve, o que facilita muito a limpeza rápida de estofados e tapetes onde os pelos costumam ficar mais presos.</p>
+
+          <h3 class="wp-block-heading"><strong>Contras do STK15</strong></h3>
+
+          <p>❌ O cabo de cinco metros pode ser um pouco curto para casas muito grandes, exigindo que você troque de tomada, e ele faz um ruído considerável que pode assustar pets mais sensíveis ao barulho.</p>
+
+          <h2 class="wp-block-heading"><strong>WAP Power Speed 2000W: A Força Bruta contra os Pelos</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2025/09/WAP-Power-Speed.jpg" alt="Aspirador WAP Power Speed 2000W" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/wappowerspeed" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>Se a sua casa parece um tapete de pelos, você precisa de um trator. O WAP Power Speed é exatamente isso. Ele foi desenhado para quem tem animais de grande porte ou vários pets em casa, oferecendo uma sucção que não perde o fôlego.</p>
+
+          <h3 class="wp-block-heading"><strong>Ficha Técnica do WAP Power Speed</strong></h3>
+
+          <p>Conta com dois mil watts de potência, um reservatório gigante de três litros, cabo de cinco metros e uma escova rotativa elétrica que é o segredo para remover pelos grudados em carpetes.</p>
+
+          <h3 class="wp-block-heading"><strong>Prós do WAP Power Speed</strong></h3>
+
+          <p>✅ A escova rotativa elétrica é simplesmente mágica para remover pelos encardidos de tapetes, e o reservatório enorme permite que você limpe a casa de forma muito organizada.</p>
+
+          <h3 class="wp-block-heading"><strong>Contras do WAP Power Speed</strong></h3>
+
+          <p>❌ Por ser muito robusto e potente, ele é um aparelho pesado e difícil de manobrar em espaços pequenos, além de exigir um bom espaço no seu armário para guardar.</p>
+
+          <h2 class="wp-block-heading"><strong>iRobot Roomba Combo J7+: Automação para Quem não Tem Tempo</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/iRobot-Roomba-Combo-J7.webp" alt="Robô Aspirador iRobot Roomba Combo J7+" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/irobotroombaj7" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>Às vezes, a gente não tem tempo nem de ligar o aspirador. O Roomba J7+ é o investimento que te devolve a liberdade. Ele identifica obstáculos e se vira sozinho.</p>
+
+          <h3 class="wp-block-heading"><strong> Ficha Técnica do Roomba J7+</strong></h3>
+
+          <p>Possui mapeamento inteligente com câmera, base de autolimpeza que descarta o pó sozinho e tecnologia de reconhecimento de objetos.</p>
+
+          <h3 class="wp-block-heading"><strong>Prós do Roomba J7+</strong></h3>
+
+          <p>✅ A base de autolimpeza é o melhor benefício para quem tem pets, pois você não precisa esvaziar o robô todo dia.</p>
+
+          <h3 class="wp-block-heading"><strong>Contras do Roomba J7+</strong></h3>
+
+          <p>❌ O preço é bem elevado, sendo um investimento de longo prazo, e ele pode ter dificuldade em aspirar tapetes de pelo muito alto.</p>
+
+          <h2 class="wp-block-heading"><strong> Liectroux G7: Tecnologia e Eficiência</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2026/03/Liectroux-G7.webp" alt="Robô Aspirador Liectroux G7" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/liectrouxg7" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>O Liectroux G7 é a escolha para quem quer um robô esperto, mas não quer gastar uma fortuna. Ele mapeia a casa toda a laser.</p>
+
+          <h3 class="wp-block-heading"><strong>Ficha Técnica do Liectroux G7</strong></h3>
+
+          <p>Oferece navegação a laser de alta precisão, controle total via aplicativo e uma potência de sucção ajustável.</p>
+
+          <h3 class="wp-block-heading"><strong>Prós do Liectroux G7</strong></h3>
+
+          <p>✅ O sistema de mapeamento a laser é muito rápido e preciso, garantindo que ele não deixe nenhum canto sem passar.</p>
+
+          <h3 class="wp-block-heading"><strong>Contras do Liectroux G7</strong></h3>
+
+          <p>❌ O aplicativo pode ser um pouco complexo para quem não tem tanta intimidade com tecnologia.</p>
+
+          <h2 class="wp-block-heading"><strong>Electrolux Ergorapido (ERG26): O Mestre dos Estofados</strong></h2>
+
+          <div style="max-width: 400px; margin: 20px auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-family: sans-serif; background-color: #fff; text-align: center;">
+              <div style="margin-bottom: 15px;">
+                  <img src="https://topaspirador.com.br/wp-content/uploads/2025/09/Electrolux-Ergorapido-ERG26.jpg" alt="Aspirador Vertical Electrolux Ergorapido ERG26" style="width: 100%; max-height: 250px; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
+              <a href="https://topaspirador.com.br/ergorapido26" target="_blank" rel="sponsored" style="display: block; background-color: #FFD814; color: #111; text-align: center; padding: 16px 15px; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: bold; border: 1px solid #FCD200; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                 <span style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon" style="width: 40px; height: 30px; display: block;">
+                     Comprar na Amazon
+                 </span>
+              </a>
+          </div>
+
+          <p>O Ergorapido é o rei da agilidade. Como ele é sem fio, você pega, limpa o sofá, limpa o tapete e guarda.</p>
+
+          <h3 class="wp-block-heading"><strong>Ficha Técnica do ERG26</strong></h3>
+
+          <p>Bateria de dezoito volts com autonomia de quarenta e cinco minutos, luzes de LED frontais e design sem fio.</p>
+
+          <h3 class="wp-block-heading"><strong>Prós do ERG26</strong></h3>
+
+          <p>✅ A tecnologia que corta os cabelos e pelos enroscados na escova é um diferencial enorme.</p>
+
+          <h3 class="wp-block-heading"><strong>Contras do ERG26</strong></h3>
+
+          <p>❌ O reservatório de pó é bem pequeno, exigindo esvaziamento frequente.</p>
+
+          <h2 class="wp-block-heading"><strong>Perguntas Frequentes (FAQ)</strong></h2>
+
+          <div class="schema-faq wp-block-yoast-faq-block">
+            <div class="schema-faq-section" id="faq-question-1775486521436">
+              <strong class="schema-faq-question">Qual aspirador é melhor para quem tem alergia a pelos de pet?</strong> 
+              <p class="schema-faq-answer">Sempre escolha modelos com filtro HEPA, como o Electrolux STK15 ou o WAP Power Speed, pois eles retêm as partículas microscópicas que causam as alergias.</p> 
+            </div> 
+            <div class="schema-faq-section" id="faq-question-1775486538266">
+              <strong class="schema-faq-question">O robô aspirador consegue mesmo tirar todos os pelos do tapete?</strong> 
+              <p class="schema-faq-answer">Ele é excelente para a manutenção diária, mas para tapetes muito felpudos, nada substitui a potência de sucção de um aspirador vertical com escova rotativa.</p> 
+            </div> 
+            <div class="schema-faq-section" id="faq-question-1775486559206">
+              <strong class="schema-faq-question">Como evitar que os pelos enrosquem nas escovas do robô?</strong> 
+              <p class="schema-faq-answer">A limpeza semanal das escovas é essencial. Se o seu pet solta muito pelo, opte por modelos que possuem tecnologias anti-enrosco ou escovas de borracha.</p> 
+            </div> 
+          </div>
+
+          <p class="has-text-align-center has-base-background-color has-background"><em>E aí, qual desses modelos vai te ajudar a ganhar essa batalha contra os pelos hoje? <strong>Deixe o seu comentário logo abaixo</strong> me contando qual é o seu maior desafio com os pets na hora da faxina. Eu adoro ler as histórias de vocês e responder cada uma!</em></p>
+
+          <!-- SEÇÃO DE COMENTÁRIOS -->
+          <section class="comment-section">
+            <h2 class="wp-block-heading">Dúvidas ou Sugestões? Deixe um comentário!</h2>
+            <form action="https://formspree.io/f/meevbyol" method="POST" class="comment-form">
+              <input type="text" name="name" placeholder="Seu Nome" required />
+              <input type="email" name="email" placeholder="Seu E-mail" required />
+              <textarea name="message" rows="4" placeholder="Sua dúvida ou comentário..." required></textarea>
+              <button type="submit" class="comment-btn">Enviar para Moderação</button>
+            </form>
+          </section>
+
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><img src="/logo.webp" alt="Logo Top Aspirador" /></div>
+          <p class="footer-description">Especialistas em tecnologia de limpeza. Analisamos os melhores aspiradores do mercado para garantir a escolha certa para seu lar.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="/aspirador-robo">Aspiradores Robô</a></li>
+            <li><a href="/aspirador-vertical">Aspiradores Verticais</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul class="footer-links">
+            <li><a href="/sobre-nos">Sobre Nós</a></li>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/politica-privacidade">Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato Oficial</h4>
+          <address>
+            <strong>Top Aspirador</strong><br />
+            Av. Pres. Vargas, 435 – Centro<br />
+            Rio de Janeiro – RJ, 20071-003<br />
+            topaspirador@gmail.com
+          </address>
+        </div>
+      </div>
+      <div class="amazon-disclaimer">
+        <p>© 2026 Top Aspirador - Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
